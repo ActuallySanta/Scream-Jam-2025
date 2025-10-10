@@ -57,12 +57,6 @@ public class PlayerController : MonoBehaviour
     /// <returns>true if the player is on a platform, false if otherwise</returns>
     private bool Grounded()
     {
-        /*  THIS FUNCTION DOSEN'T WORK RIGHT NOW, I'm gonna get around to fixing it.
-        float checkDistance = 1f;
-        
-        print(Physics2D.Raycast(new Vector2(0f, -collider.bounds.extents.y - .01f), Vector2.down, checkDistance).distance);
-        return Physics2D.Raycast(new Vector2(0f, -collider.bounds.extents.y - .01f), Vector2.down, checkDistance).distance != 0 ;
-        */
         if (Physics2D.OverlapCircle(groundCheckPos.position, groundCheckRad, groundLayers))
         {
             return true;
@@ -71,7 +65,6 @@ public class PlayerController : MonoBehaviour
         {
             return false;
         }
-
     }
 
     private void OnDrawGizmos()

@@ -175,4 +175,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd839bff33361f4987e0090455706be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onMove:
+    m_PersistentCalls:
+      m_Calls: []
+  onJump:
+    m_PersistentCalls:
+      m_Calls: []
   Player: {fileID: 0}
