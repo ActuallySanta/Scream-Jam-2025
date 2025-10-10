@@ -2,7 +2,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IPlayer
 {
     // Public variables
     [SerializeField] private float moveSpeed;
@@ -79,6 +79,24 @@ public class PlayerController : MonoBehaviour
         //Draw a debug gizmo that shows the size of the ground check
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(groundCheckPos.position, groundCheckRad);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        switch (collision.gameObject.tag)
+        {
+            case "Hazard":
+                {
+                    collision.gameObject.GetComponent<HazardController>().PerformHazard(this);
+                    break;
+                }
+        }
+    }
+
+    public void HurtPlayer()
+    {
+        // unclear if spikes instakill or just lower player hp, so putting this in as placeholder
+        Debug.Log("Hurting player");
     }
 }
 
