@@ -5,8 +5,8 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     // Public variables
-    public float moveSpeed;
-    public float jumpVelocity;
+    [SerializeField] private float moveSpeed;
+    [SerializeField] private float jumpVelocity;
 
     // Private Variables
     private Vector2 moveDirection;
@@ -15,6 +15,10 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private CapsuleCollider2D collider;
 
+    //Ground Check
+    [SerializeField] private Transform groundCheckPos; //The transform of the empty game object that the ground check sphere will originate from
+    [SerializeField] private float groundCheckRad; //The radius of the ground check spherecast
+    [SerializeField] private LayerMask groundLayers; //All the unity layers that qualify as grounds for the groundcheck
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -59,7 +63,22 @@ public class PlayerController : MonoBehaviour
         print(Physics2D.Raycast(new Vector2(0f, -collider.bounds.extents.y - .01f), Vector2.down, checkDistance).distance);
         return Physics2D.Raycast(new Vector2(0f, -collider.bounds.extents.y - .01f), Vector2.down, checkDistance).distance != 0 ;
         */
-        return true;
+        if (Physics2D.OverlapCircle(groundCheckPos.position, groundCheckRad, groundLayers))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
+    }
+
+    private void OnDrawGizmos()
+    {
+        //Draw a debug gizmo that shows the size of the ground check
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(groundCheckPos.position, groundCheckRad);
     }
 }
 
