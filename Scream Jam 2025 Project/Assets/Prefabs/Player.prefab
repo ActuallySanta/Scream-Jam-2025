@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4065174677107443619}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ground Check Pos
   m_TagString: Untagged
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
@@ -44,9 +44,9 @@ GameObject:
   - component: {fileID: 156508310048371580}
   - component: {fileID: 2901637611873821166}
   - component: {fileID: 3518220706086121954}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  jumpVelocity: 5
+  jumpVelocity: 13
   groundCheckPos: {fileID: 4065174677107443619}
   groundCheckRad: 0.55
   groundLayers:
@@ -193,7 +193,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
