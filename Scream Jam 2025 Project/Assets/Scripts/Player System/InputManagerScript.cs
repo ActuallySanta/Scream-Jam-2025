@@ -6,6 +6,7 @@ public class InputManagerScript : MonoBehaviour
 {
     public UnityEvent<InputAction.CallbackContext> onMove;
     public UnityEvent<InputAction.CallbackContext> onJump;
+    public UnityEvent<InputAction.CallbackContext> onThrow;
 
     private PlayerController playerController;
 
@@ -25,6 +26,11 @@ public class InputManagerScript : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         onMove.Invoke(context);
+    }
+
+    public void OnThrow(InputAction.CallbackContext context)
+    {
+        onThrow.Invoke(context);
     }
 
     public void OnJump(InputAction.CallbackContext context)
