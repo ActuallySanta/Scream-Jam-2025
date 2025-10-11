@@ -1,13 +1,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance { get; private set; }
 
     //Respawning
-    public GameObject playerGameObject { get;private set; }
+    public GameObject playerGameObject;
     [SerializeField] private GameObject playerPrefab;
     public delegate void OnPlayerRespawnEventHandler();
     public event OnPlayerRespawnEventHandler OnPlayerRespawn;
@@ -28,6 +29,9 @@ public class GameManager : MonoBehaviour
     public delegate void OnPauseEventHandler();
     public event OnPauseEventHandler OnPause;
 
+    //Debug Mode
+    public bool isDebugging { get; private set; }
+
     void Awake()
     {
         //Implement the singleton
@@ -45,6 +49,32 @@ public class GameManager : MonoBehaviour
     {
         //Set the game object as persistent
         DontDestroyOnLoad(gameObject);
+
+        //Initialize Bools
+        isDebugging = false;
+    }
+
+    private void Update()
+    {
+        //Debugging Buttons
+        if (isDebugging)
+        {
+            Debug.Log("Debugging!");
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                RespawnPlayer();
+            }
+        }
+    }
+
+
+    /// <summary>
+    /// Allow toggling of the debugging keybinds
+    /// </summary>
+    public void ToggleDebugMode(InputAction.CallbackContext context)
+    {
+        if (context.performed) isDebugging = !isDebugging;
+
     }
 
     /// <summary>
@@ -95,11 +125,17 @@ public class GameManager : MonoBehaviour
 
     public void RespawnPlayer()
     {
-        Destroy(playerGameObject);
-        playerGameObject = null;
+        if (currCheckpoint != null)
+        {
+            Destroy(playerGameObject);
+            playerGameObject = null;
 
-        OnPlayerRespawn?.Invoke();
-        playerGameObject = Instantiate(playerPrefab, currCheckpoint.transform.position,Quaternion.identity);
-        
+            OnPlayerRespawn?.Invoke();
+            playerGameObject = Instantiate(playerPrefab, currCheckpoint.transform.position, Quaternion.identity);
+        }
+        else
+        {
+            Debug.LogWarning("No Checkpoint Set");
+        }
     }
 }

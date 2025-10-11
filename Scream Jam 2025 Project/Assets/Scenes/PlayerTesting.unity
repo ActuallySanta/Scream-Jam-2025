@@ -205,6 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d35d1023fac11a47b0bce37bc55bf7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerGameObject: {fileID: 1443035247}
   playerPrefab: {fileID: 7819505692149693740, guid: 153b360dae1e21f4dbf330abad56f786, type: 3}
   accquiredCandy: []
 --- !u!4 &299003488
@@ -576,6 +577,46 @@ PrefabInstance:
     - target: {fileID: 4989572536893289143, guid: 5c1ad49e763845d4ba052765d4808cf9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783092887410174465, guid: 5c1ad49e763845d4ba052765d4808cf9, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783092887410174465, guid: 5c1ad49e763845d4ba052765d4808cf9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[19].m_ActionId
+      value: 3e3d4670-c9a3-454a-a4f9-61c074436cfa
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783092887410174465, guid: 5c1ad49e763845d4ba052765d4808cf9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[19].m_ActionName
+      value: 'Player/Toggle Debugging[/Keyboard/backquote]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783092887410174465, guid: 5c1ad49e763845d4ba052765d4808cf9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[19].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783092887410174465, guid: 5c1ad49e763845d4ba052765d4808cf9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[19].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783092887410174465, guid: 5c1ad49e763845d4ba052765d4808cf9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[19].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 299003487}
+    - target: {fileID: 6783092887410174465, guid: 5c1ad49e763845d4ba052765d4808cf9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[19].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783092887410174465, guid: 5c1ad49e763845d4ba052765d4808cf9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[19].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToggleDebugMode
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783092887410174465, guid: 5c1ad49e763845d4ba052765d4808cf9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[19].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783092887410174465, guid: 5c1ad49e763845d4ba052765d4808cf9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[19].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8205483802622812638, guid: 5c1ad49e763845d4ba052765d4808cf9, type: 3}
       propertyPath: m_Name
