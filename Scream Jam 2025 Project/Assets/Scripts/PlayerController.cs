@@ -1,15 +1,19 @@
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(Interactor))]
 public class PlayerController : MonoBehaviour, IPlayer
 {
     //Basic Movement
+    [Header("Movement")]
     [SerializeField] private float moveSpeed;
     [SerializeField] private float jumpVelocity;
     private Vector2 moveDirection;
 
     //Head-throwing
+    [Header("Head-throwing")]
     [SerializeField] private GameObject headProjectile;
     [SerializeField] private float throwVelocity;
     private bool hasThrown = false;
@@ -23,17 +27,22 @@ public class PlayerController : MonoBehaviour, IPlayer
     private CapsuleCollider2D collider;
 
     //Ground Check
+    [Header("Ground Check")]
     [SerializeField] private Transform groundCheckPos; //The transform of the empty game object that the ground check sphere will originate from
     [SerializeField] private float groundCheckRad; //The radius of the ground check spherecast
     [SerializeField] private LayerMask groundLayers; //All the unity layers that qualify as grounds for the groundcheck
 
-
+    private Interactor interactorComponent;
+    private Interactable currentInteractable;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         collider = GetComponent<CapsuleCollider2D>();
+        interactorComponent = GetComponent<Interactor>();
+
+        interactorComponent.OnInteractableInRange += SetCurrentInteractable;
     }
 
     // Update is called once per frame
@@ -67,13 +76,21 @@ public class PlayerController : MonoBehaviour, IPlayer
     /// <param name="collision"></param>
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.gameObject.CompareTag("Thrown Head") && pickupTimer <= 0)
+        if (collision.gameObject.CompareTag("Thrown Head") && pickupTimer <= 0)
         {
             Destroy(collision.collider.gameObject);
             hasThrown = false;
         }
-    }
 
+        if (collision.gameObject.CompareTag("Hazard"))
+        {
+            HazardController hazard = collision.gameObject.GetComponent<HazardController>();
+            if (hazard != null)
+            {
+                hazard.PerformHazard(this);
+            }
+        }
+    }
 
     // Input Action Functions
     public void OnMove(InputAction.CallbackContext context)
@@ -87,6 +104,7 @@ public class PlayerController : MonoBehaviour, IPlayer
             rb.linearVelocityY = jumpVelocity;
         }
     }
+
     public void OnThrow(InputAction.CallbackContext context)
     {
         if (!hasThrown)
@@ -108,6 +126,16 @@ public class PlayerController : MonoBehaviour, IPlayer
         pickupTimer = pickupTimerReset;
     }
 
+
+    public void OnInteract(InputAction.CallbackContext context)
+    {
+        Debug.Log("null check");
+        if (currentInteractable != null)
+        {
+            Debug.Log("Interacting!");
+            currentInteractable.Interact();
+        }
+    }
 
     // Misc Utility Functions
 
@@ -134,6 +162,12 @@ public class PlayerController : MonoBehaviour, IPlayer
 
     }
 
+    public void SetCurrentInteractable(Interactable interactable)
+    {
+        //Debug.Log("Setting current interactable");
+        currentInteractable = interactable;
+    }
+
     private void OnDrawGizmos()
     {
         //Draw a debug gizmo that shows the size of the ground check
@@ -141,22 +175,23 @@ public class PlayerController : MonoBehaviour, IPlayer
         Gizmos.DrawWireSphere(groundCheckPos.position, groundCheckRad);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        switch (collision.gameObject.tag)
-        {
-            case "Hazard":
-                {
-                    collision.gameObject.GetComponent<HazardController>().PerformHazard(this);
-                    break;
-                }
-        }
-    }
-
+    /// <summary>
+    /// "Hurts" the player (however we want that to function)
+    /// </summary>
     public void HurtPlayer()
     {
         // unclear if spikes instakill or just lower player hp, so putting this in as placeholder
         Debug.Log("Hurting player");
+    }
+
+    /// <summary>
+    /// Adds a force to the players rigidbody
+    /// </summary>
+    /// <param name="force">Force vector</param>
+    /// <param name="mode">Force mode, set to Force by default</param>
+    public void AddForce(Vector2 force, ForceMode2D mode=ForceMode2D.Force)
+    {
+        rb.AddForce(force, mode);
     }
 }
 
