@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     // Components
     private Rigidbody2D rb;
     private CapsuleCollider2D collider;
+    private Animator animator;
 
     //Ground Check
     [SerializeField] private Transform groundCheckPos; //The transform of the empty game object that the ground check sphere will originate from
@@ -32,8 +33,9 @@ public class PlayerController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        collider = GetComponent<CapsuleCollider2D>();
+        rb =        GetComponent<Rigidbody2D>();
+        collider =  GetComponent<CapsuleCollider2D>();
+        animator =  GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -50,6 +52,9 @@ public class PlayerController : MonoBehaviour
         } else if (moveDirection.x == -1)
         {
             facingRight = false;
+        } else if (moveDirection.x== 0)
+        {
+            animator.SetBool("IsMoving", false);
         }
     }
     private void FixedUpdate()
@@ -79,6 +84,7 @@ public class PlayerController : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         moveDirection = context.ReadValue<Vector2>();
+        animator.SetBool("IsMoving", true);
     }
     public void OnJump(InputAction.CallbackContext context)
     {
