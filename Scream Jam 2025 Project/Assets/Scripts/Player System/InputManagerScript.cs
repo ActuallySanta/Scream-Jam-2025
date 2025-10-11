@@ -8,14 +8,13 @@ public class InputManagerScript : MonoBehaviour
     public UnityEvent<InputAction.CallbackContext> onJump;
     public UnityEvent<InputAction.CallbackContext> onThrow;
 
-    public GameObject Player;
     private PlayerController playerController;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        playerController = Player.GetComponent<PlayerController>();
+        playerController = GameManager.instance.playerGameObject.GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
