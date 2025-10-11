@@ -3,6 +3,9 @@ using UnityEngine.InputSystem;
 
 public class InputManagerScript : MonoBehaviour
 {
+    public UnityEvent<InputAction.CallbackContext> onMove;
+    public UnityEvent<InputAction.CallbackContext> onJump;
+    public UnityEvent<InputAction.CallbackContext> onThrow;
 
     public GameObject Player;
     private PlayerController playerController;
@@ -23,6 +26,11 @@ public class InputManagerScript : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         playerController.OnMove(context);
+    }
+
+    public void OnThrow(InputAction.CallbackContext context)
+    {
+        onThrow.Invoke(context);
     }
 
     public void OnJump(InputAction.CallbackContext context)
