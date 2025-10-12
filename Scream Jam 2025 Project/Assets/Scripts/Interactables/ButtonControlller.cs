@@ -2,12 +2,15 @@ using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class ButtonControlller : MonoBehaviour
+public class ButtonControlller : MonoBehaviour, IUnlockCondition
 {
     public event Action OnButtonPressed;
     public event Action OnButtonReleased;
 
     [SerializeField] private LayerMask buttonLayerMask;
+    private bool pressed;
+    public bool unlockConditionMet => pressed;
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,13 +18,19 @@ public class ButtonControlller : MonoBehaviour
         if (((1 << collisionObjLayer) & buttonLayerMask.value) != 0) // checks if object colliding w this button shares a layer in this layer mask
         {
             Debug.Log("Button pressed");
+            pressed = true;
             OnButtonPressed?.Invoke();
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("button released");
-        OnButtonReleased?.Invoke();
+        int collisionObjLayer = collision.gameObject.layer;
+        if (((1 << collisionObjLayer) & buttonLayerMask.value) != 0) // checks if object colliding w this button shares a layer in this layer mask
+        {
+            Debug.Log("button released");
+            pressed = false;
+            OnButtonReleased?.Invoke();
+        }
     }
 }
