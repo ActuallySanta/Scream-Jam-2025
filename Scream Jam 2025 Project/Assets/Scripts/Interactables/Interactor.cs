@@ -23,6 +23,10 @@ public class Interactor : MonoBehaviour
             //Debug.Log("interactable found");
             OnInteractableInRange?.Invoke(hit.GetComponent<Interactable>());
         }
+        else
+        {
+            OnInteractableInRange?.Invoke(null);
+        }
     }
 
     private void OnDrawGizmos()
