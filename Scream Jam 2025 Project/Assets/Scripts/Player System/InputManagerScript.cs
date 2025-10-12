@@ -1,26 +1,28 @@
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using UnityEngine.Events;
+
+[System.Serializable]
+public class InputActionEvent : UnityEvent<InputAction.CallbackContext> { }
+
 
 public class InputManagerScript : MonoBehaviour
 {
-    public UnityEvent<InputAction.CallbackContext> onMove;
-    public UnityEvent<InputAction.CallbackContext> onJump;
-    public UnityEvent<InputAction.CallbackContext> onThrow;
+    public InputActionEvent onMove;
+    public InputActionEvent onJump;
+    public InputActionEvent onThrow;
+    public InputActionEvent onInteract;
 
-    private PlayerController playerController;
+    [SerializeField] private PlayerController player;
 
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Update()
     {
-        playerController = GameManager.instance.playerGameObject.GetComponent<PlayerController>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (Keyboard.current.eKey.wasPressedThisFrame)
+        {
+            Debug.Log("E key pressed");
+            onInteract.Invoke(new InputAction.CallbackContext());
+        }
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -36,5 +38,11 @@ public class InputManagerScript : MonoBehaviour
     public void OnJump(InputAction.CallbackContext context)
     {
         onJump.Invoke(context);
+    }
+
+    public void OnInteract(InputAction.CallbackContext context)
+    {
+        Debug.Log("On interact fired   " + onInteract.GetPersistentEventCount());
+        onInteract.Invoke(context);
     }
 }
