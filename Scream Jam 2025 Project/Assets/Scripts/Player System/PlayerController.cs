@@ -2,6 +2,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(Interactor))]
 public class PlayerController : MonoBehaviour
 {
     //Basic Movement
@@ -28,7 +29,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float groundCheckRad; //The radius of the ground check spherecast
     [SerializeField] private LayerMask groundLayers; //All the unity layers that qualify as grounds for the groundcheck
 
+    private Interactor interactorComponent;
+    private Interactable currentInteractable;
 
+    public InputManagerScript inputManager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -36,6 +40,9 @@ public class PlayerController : MonoBehaviour
         rb =        GetComponent<Rigidbody2D>();
         collider =  GetComponent<CapsuleCollider2D>();
         animator =  GetComponent<Animator>();
+
+        interactorComponent = GetComponent<Interactor>();
+        interactorComponent.OnInteractableInRange += SetCurrentInteractable;
     }
 
     // Update is called once per frame
@@ -114,8 +121,23 @@ public class PlayerController : MonoBehaviour
         pickupTimer = pickupTimerReset;
     }
 
+    public void HandleInteract(InputAction.CallbackContext context)
+    {
+        Debug.Log("null check");
+        if (currentInteractable != null)
+        {
+            Debug.Log("Interacting!");
+            currentInteractable.Interact();
+        }
+    }
 
     // Misc Utility Functions
+
+    public void SetCurrentInteractable(Interactable interactable)
+    {
+        //Debug.Log("Setting current interactable");
+        currentInteractable = interactable;
+    }
 
     /// <summary>
     /// Checks if the player is on a platform
