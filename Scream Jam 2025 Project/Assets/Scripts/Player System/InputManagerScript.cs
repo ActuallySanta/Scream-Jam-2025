@@ -18,6 +18,7 @@ public class InputManagerScript : MonoBehaviour
 
     private void Update()
     {
+        // fix for interactable not being called. ik its scuffed but only way i could work it -cooper
         if (Keyboard.current.eKey.wasPressedThisFrame)
         {
             Debug.Log("E key pressed");
