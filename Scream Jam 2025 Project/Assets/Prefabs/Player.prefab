@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 2901637611873821166}
   - component: {fileID: 3518220706086121954}
   - component: {fileID: 6981096712211011261}
+  - component: {fileID: 8474657536256604597}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -137,11 +138,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   jumpVelocity: 13
+  headProjectile: {fileID: 7256992955573663805, guid: f0460741b0959db45a9f932122341fe3, type: 3}
+  throwVelocity: 0
+  pickupTimerReset: 0
   groundCheckPos: {fileID: 4065174677107443619}
   groundCheckRad: 0.55
   groundLayers:
     serializedVersion: 2
     m_Bits: 64
+  inputManager: {fileID: 0}
 --- !u!70 &2901637611873821166
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -228,3 +233,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8474657536256604597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7819505692149693740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ec8e7dffa128cd4786049dbbd1aaae3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionRadius: 0
+  interactionMask:
+    serializedVersion: 2
+    m_Bits: 0

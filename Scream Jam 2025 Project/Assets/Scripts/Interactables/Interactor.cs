@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using UnityEngine;
 using System;
+using System.Linq;
 
 public class Interactor : MonoBehaviour
 {
@@ -17,11 +18,20 @@ public class Interactor : MonoBehaviour
 
     void DetectInteractable()
     {
-        Collider2D hit = Physics2D.OverlapCircle(transform.position, interactionRadius, interactionMask);
-        if (hit)
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, interactionRadius, interactionMask);
+        
+        Collider2D nearest = hits
+            .OrderBy(h => (h.transform.position - transform.position).sqrMagnitude)
+            .FirstOrDefault();
+
+        if (nearest)
         {
             //Debug.Log("interactable found");
-            OnInteractableInRange?.Invoke(hit.GetComponent<Interactable>());
+            OnInteractableInRange?.Invoke(nearest.GetComponent<Interactable>());
+        }
+        else
+        {
+            OnInteractableInRange?.Invoke(null);
         }
     }
 
