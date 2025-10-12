@@ -35,6 +35,8 @@ public class PlayerController : MonoBehaviour, IPlayer
     private Interactor interactorComponent;
     private Interactable currentInteractable;
 
+    public InputManagerScript inputManager;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -43,6 +45,7 @@ public class PlayerController : MonoBehaviour, IPlayer
         interactorComponent = GetComponent<Interactor>();
 
         interactorComponent.OnInteractableInRange += SetCurrentInteractable;
+        inputManager.onInteract.AddListener(HandleInteract);
     }
 
     // Update is called once per frame
@@ -127,7 +130,7 @@ public class PlayerController : MonoBehaviour, IPlayer
     }
 
 
-    public void OnInteract(InputAction.CallbackContext context)
+    public void HandleInteract(InputAction.CallbackContext context)
     {
         Debug.Log("null check");
         if (currentInteractable != null)

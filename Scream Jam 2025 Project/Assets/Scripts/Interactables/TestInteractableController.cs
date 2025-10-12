@@ -23,7 +23,11 @@ public class TestInteractableController : Interactable
         base.Interact();
 
         sr.color = interactedColor;
-        StopCoroutine(currentCountdown);
+        if (currentCountdown != null)
+        {
+            StopCoroutine(currentCountdown);
+        }
+        
         currentCountdown = StartCoroutine(ResetColorAfterDelay(delay));
     }
 
