@@ -5,7 +5,6 @@ TagManager:
   serializedVersion: 3
   tags:
   - Thrown Head
-  - Hazard
   layers:
   - Default
   - TransparentFX
