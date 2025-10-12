@@ -8,6 +8,6 @@ public abstract class IInteractable
 
     public virtual void Interact()
     {
-        OnInteract
+        //OnInteract
     }
 }
