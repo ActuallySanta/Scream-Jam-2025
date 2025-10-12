@@ -6,16 +6,19 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     //Basic Movement
+    [Header("Movement")]
     [SerializeField] private float moveSpeed;
     [SerializeField] private float jumpVelocity;
     private Vector2 moveDirection;
 
     //Head-throwing
+    [Header("Head Throwing")]
     [SerializeField] private GameObject headProjectile;
     [SerializeField] private float throwVelocity;
     private bool hasThrown = false;
     private bool facingRight = true; // Will need to be used by spriteRenderer
     //Timer
+    [Header("Timer")]
     [SerializeField] private float pickupTimerReset;
     private float pickupTimer = 0.0f;
 
@@ -25,6 +28,7 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
 
     //Ground Check
+    [Header("Ground check")]
     [SerializeField] private Transform groundCheckPos; //The transform of the empty game object that the ground check sphere will originate from
     [SerializeField] private float groundCheckRad; //The radius of the ground check spherecast
     [SerializeField] private LayerMask groundLayers; //All the unity layers that qualify as grounds for the groundcheck
