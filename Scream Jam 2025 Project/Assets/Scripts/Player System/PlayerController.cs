@@ -60,6 +60,9 @@ public class PlayerController : MonoBehaviour
     //Player State Machine
     private PlayerState currPlayerState;
 
+    //Player Respawning
+    [SerializeField] private float playerRespawnCoolDown = 0.75f;
+
     private void Awake()
     {
         inputActions = new InputSystem_Actions();
