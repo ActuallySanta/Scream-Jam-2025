@@ -20,7 +20,6 @@ public class PlayerController : MonoBehaviour
     [Header("Movement")]
     [SerializeField] private float moveSpeed;
     [SerializeField] private float jumpVelocity;
-    private Vector2 moveDirection;
 
     //Head-throwing
     [Header("Head Throwing")]
@@ -45,6 +44,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform groundCheckPos; //The transform of the empty game object that the ground check sphere will originate from
     [SerializeField] private float groundCheckRad; //The radius of the ground check spherecast
     [SerializeField] private LayerMask groundLayers; //All the unity layers that qualify as grounds for the groundcheck
+    private bool isGrounded = false;
 
     private Interactor interactorComponent;
     private Interactable currentInteractable;
@@ -56,6 +56,8 @@ public class PlayerController : MonoBehaviour
     private InputAction onJump;
     private InputAction onThrow;
     private InputAction onInteract;
+
+    private Vector2 moveInput;
 
     //Player State Machine
     private PlayerState currPlayerState;
@@ -105,14 +107,22 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!Grounded() && currPlayerState != PlayerState.Respawning) ChangeState(PlayerState.InAir);
+        GetMoveInput();
+
+        if (currPlayerState == PlayerState.Respawning) return;
+
+        if (!Grounded() && currPlayerState != PlayerState.InAir)
+        {
+            ChangeState(PlayerState.InAir);
+        }
+
 
         switch (currPlayerState)
         {
             case PlayerState.InAir:
             case PlayerState.Moving:
                 // Move the player horizontally
-                rb.linearVelocity = new Vector2(moveDirection.x * moveSpeed * Time.deltaTime, rb.linearVelocityY);
+                rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, rb.linearVelocityY);
                 break;
 
         }
@@ -144,15 +154,16 @@ public class PlayerController : MonoBehaviour
 
 
     // Input Action Functions
-    public void OnMove(InputAction.CallbackContext context)
+    public void GetMoveInput()
     {
-        moveDirection = context.ReadValue<Vector2>();
-        if (moveDirection.x != 0)
+        moveInput = onMove.ReadValue<Vector2>();
+
+        if (moveInput.x != 0)
         {
-            transform.localScale = new Vector3(Mathf.Sign(moveDirection.x), transform.localScale.y, transform.localScale.z);
+            transform.localScale = new Vector3(Mathf.Sign(moveInput.x), transform.localScale.y, transform.localScale.z);
         }
 
-        if (moveDirection.magnitude != 0) ChangeState(PlayerState.Moving);
+        if (moveInput.x != 0) ChangeState(PlayerState.Moving);
         else ChangeState(PlayerState.Idle);
 
 
@@ -170,9 +181,13 @@ public class PlayerController : MonoBehaviour
     {
         if (!hasHead)
         {
-            GameObject head = Instantiate(headProjectile);
+            GameObject head = Instantiate(headProjectile, headSpawnPoint.transform.position, Quaternion.identity);
+            head.transform.parent = null;
 
-            head.GetComponent<Rigidbody2D>().AddForce(rb.linearVelocity * throwVelocity, ForceMode2D.Impulse);
+            head.GetComponent<Rigidbody2D>().AddForce(
+                new Vector2(rb.linearVelocity.x + (Mathf.Sign(rb.linearVelocityX) * throwVelocity),
+                rb.linearVelocity.y + (Mathf.Sign(rb.linearVelocityY) * throwVelocity)),
+                ForceMode2D.Impulse);
         }
         hasHead = true;
         pickupTimer = pickupTimerReset;
@@ -223,13 +238,14 @@ public class PlayerController : MonoBehaviour
                 break;
         }
 
-        Debug.Log("Current State is now: " + newStateToChangeTo);
+        //Debug.Log("Current State is now: " + newStateToChangeTo);
         currPlayerState = newStateToChangeTo;
     }
 
     public void OnPlayerDeath()
     {
         ChangeState(PlayerState.Respawning);
+        StartCoroutine(EndPlayerRespawn());
 
     }
 
