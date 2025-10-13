@@ -81,6 +81,9 @@ public class PlayerController : MonoBehaviour
         inputActions.Player.Throw.performed += OnThrow;
         inputActions.Player.Throw.Enable();
 
+        inputActions.Player.Interact.performed += HandleInteract;
+        inputActions.Player.Interact.Enable();
+
         //Copy this for the interact event
     }
 

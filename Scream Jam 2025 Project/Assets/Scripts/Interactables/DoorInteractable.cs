@@ -3,12 +3,14 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class DoorInteractable : Interactable
+public class DoorInteractable : MonoBehaviour
 {
     [SerializeField] private List<MonoBehaviour> conditionComponents = new(); // assign in inspector
     private List<IUnlockCondition> conditions = new();
 
     private bool isUnlocked = false;
+
+    private Collider2D collider;
 
     private void Awake()
     {
@@ -24,17 +26,19 @@ public class DoorInteractable : Interactable
                 Debug.LogWarning($"{comp.name} does not implement IUnlockCondition!");
             }
         }
+
+        collider = GetComponent<Collider2D>();
     }
 
     private void Update()
     {
         if (CheckConditionsMet())
         {
-            isUnlocked = true;
+            collider.enabled = false;
         }
         else
         {
-            isUnlocked = false;
+            collider.enabled = true;
         }
     }
 
@@ -49,7 +53,7 @@ public class DoorInteractable : Interactable
         }
         return true;
     }
-
+    /*
     public override void Interact()
     {
         base.Interact();
@@ -65,4 +69,5 @@ public class DoorInteractable : Interactable
             Debug.Log("Door is not unlocked. BLOCKED");
         }
     }
+    */
 }
