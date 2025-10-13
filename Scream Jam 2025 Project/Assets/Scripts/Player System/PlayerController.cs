@@ -1,6 +1,17 @@
+using System.Collections;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
+
+public enum PlayerState
+{
+    Idle,
+    Moving,
+    Jumping,
+    InAir,
+    Respawning,
+    PickupSkull,
+}
 
 [RequireComponent(typeof(Interactor))]
 public class PlayerController : MonoBehaviour
@@ -9,14 +20,15 @@ public class PlayerController : MonoBehaviour
     [Header("Movement")]
     [SerializeField] private float moveSpeed;
     [SerializeField] private float jumpVelocity;
-    private Vector2 moveDirection;
 
     //Head-throwing
     [Header("Head Throwing")]
     [SerializeField] private GameObject headProjectile;
     [SerializeField] private float throwVelocity;
-    private bool hasThrown = false;
-    private bool facingRight = true; // Will need to be used by spriteRenderer
+    [SerializeField] private Transform headSpawnPoint;
+
+    private bool hasHead = false;
+
     //Timer
     [Header("Timer")]
     [SerializeField] private float pickupTimerReset;
@@ -25,53 +37,102 @@ public class PlayerController : MonoBehaviour
     // Components
     private Rigidbody2D rb;
     private CapsuleCollider2D collider;
-    private Animator animator;
+    private Animator anim;
 
     //Ground Check
     [Header("Ground check")]
     [SerializeField] private Transform groundCheckPos; //The transform of the empty game object that the ground check sphere will originate from
     [SerializeField] private float groundCheckRad; //The radius of the ground check spherecast
     [SerializeField] private LayerMask groundLayers; //All the unity layers that qualify as grounds for the groundcheck
+    private bool isGrounded = false;
 
     private Interactor interactorComponent;
     private Interactable currentInteractable;
 
-    public InputManagerScript inputManager;
+    //Player Input
+    private InputSystem_Actions inputActions;
+
+    private InputAction onMove;
+    private InputAction onJump;
+    private InputAction onThrow;
+    private InputAction onInteract;
+
+    private Vector2 moveInput;
+
+    //Player State Machine
+    private PlayerState currPlayerState;
+
+    //Player Respawning
+    [SerializeField] private float playerRespawnCoolDown = 0.75f;
+
+    private void Awake()
+    {
+        inputActions = new InputSystem_Actions();
+    }
+
+    private void OnEnable()
+    {
+        onMove = inputActions.Player.Move;
+        onMove.Enable();
+
+        inputActions.Player.Jump.performed += OnJump;
+        inputActions.Player.Jump.Enable();
+
+        inputActions.Player.Throw.performed += OnThrow;
+        inputActions.Player.Throw.Enable();
+
+        //Copy this for the interact event
+    }
+
+    private void OnDisable()
+    {
+        onMove.Disable();
+        inputActions.Player.Throw.Disable();
+        inputActions.Player.Jump.Disable();
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rb =        GetComponent<Rigidbody2D>();
-        collider =  GetComponent<CapsuleCollider2D>();
-        animator =  GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
+        collider = GetComponent<CapsuleCollider2D>();
+        anim = GetComponent<Animator>();
 
         interactorComponent = GetComponent<Interactor>();
         interactorComponent.OnInteractableInRange += SetCurrentInteractable;
+
+        currPlayerState = PlayerState.Idle;
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Move the player horizontally
-        transform.position = (Vector2)transform.position + new Vector2(moveDirection.x * moveSpeed * Time.deltaTime, 0);
-        
-        //Helps to determine which way the player is facing, even after they've stopped moving.
-        //Couldn't think of a better way to do it off the top of my head but if its dumb as shit you can change it. 
-        if (moveDirection.x == 1)
+        GetMoveInput();
+
+        if (currPlayerState == PlayerState.Respawning) return;
+
+        if (!Grounded() && currPlayerState != PlayerState.InAir)
         {
-            facingRight = true;
-        } else if (moveDirection.x == -1)
-        {
-            facingRight = false;
-        } else if (moveDirection.x== 0)
-        {
-            animator.SetBool("IsMoving", false);
+            ChangeState(PlayerState.InAir);
         }
+
+
+        switch (currPlayerState)
+        {
+            case PlayerState.InAir:
+            case PlayerState.Moving:
+                // Move the player horizontally
+                rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, rb.linearVelocityY);
+                break;
+
+        }
+        ;
+
     }
     private void FixedUpdate()
     {
         // Just responsible for counting down the timer after a head gets thrown, could probably be in Update(), but this is marginally more accurate.
-        if(pickupTimer > 0)
+        if (pickupTimer > 0)
         {
             pickupTimer -= Time.fixedDeltaTime;
         }
@@ -85,18 +146,29 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.collider.gameObject.CompareTag("Thrown Head") && pickupTimer <= 0)
         {
+            ChangeState(PlayerState.PickupSkull);
             Destroy(collision.collider.gameObject);
-            hasThrown = false;
+            hasHead = false;
         }
     }
 
 
     // Input Action Functions
-    public void OnMove(InputAction.CallbackContext context)
+    public void GetMoveInput()
     {
-        moveDirection = context.ReadValue<Vector2>();
-        animator.SetBool("IsMoving", true);
+        moveInput = onMove.ReadValue<Vector2>();
+
+        if (moveInput.x != 0)
+        {
+            transform.localScale = new Vector3(Mathf.Sign(moveInput.x), transform.localScale.y, transform.localScale.z);
+        }
+
+        if (moveInput.x != 0) ChangeState(PlayerState.Moving);
+        else ChangeState(PlayerState.Idle);
+
+
     }
+
     public void OnJump(InputAction.CallbackContext context)
     {
         if (context.performed && Grounded())
@@ -104,24 +176,20 @@ public class PlayerController : MonoBehaviour
             rb.linearVelocityY = jumpVelocity;
         }
     }
+
     public void OnThrow(InputAction.CallbackContext context)
     {
-        if (!hasThrown)
+        if (!hasHead)
         {
-            GameObject head = Instantiate(headProjectile);
-            switch (facingRight)
-            {
-                case true:
-                    head.transform.position = new Vector2(transform.position.x + .5f, transform.position.y +.5f); //Adjust starting pos of head relative to player
-                    head.GetComponent<Rigidbody2D>().linearVelocityX += throwVelocity + rb.linearVelocityX; //Setup velocity so it adds with player's velocity
-                    break;
-                case false:
-                    head.transform.position = new Vector2(transform.position.x - .5f, transform.position.y + .5f);
-                    head.GetComponent<Rigidbody2D>().linearVelocityX -= throwVelocity + rb.linearVelocityX;
-                    break;
-            }
+            GameObject head = Instantiate(headProjectile, headSpawnPoint.transform.position, Quaternion.identity);
+            head.transform.parent = null;
+
+            head.GetComponent<Rigidbody2D>().AddForce(
+                new Vector2(rb.linearVelocity.x + (Mathf.Sign(rb.linearVelocityX) * throwVelocity),
+                rb.linearVelocity.y + (Mathf.Sign(rb.linearVelocityY) * throwVelocity)),
+                ForceMode2D.Impulse);
         }
-        hasThrown = true;
+        hasHead = true;
         pickupTimer = pickupTimerReset;
     }
 
@@ -133,6 +201,58 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Interacting!");
             currentInteractable.Interact();
         }
+    }
+
+    private void ChangeState(PlayerState newStateToChangeTo)
+    {
+        //Set all bools to false
+        foreach (AnimatorControllerParameter item in anim.parameters)
+        {
+            anim.SetBool(item.name, false);
+        }
+
+        switch (newStateToChangeTo)
+        {
+            case PlayerState.Idle:
+                anim.SetBool("IsIdle", true);
+                break;
+
+            case PlayerState.Moving:
+                anim.SetBool("IsMoving", true);
+                break;
+
+            case PlayerState.Jumping:
+                anim.SetBool("IsJumping", true);
+                break;
+
+            case PlayerState.InAir:
+                anim.SetBool("IsInAir", true);
+                break;
+
+            case PlayerState.Respawning:
+                anim.SetBool("IsRespawning", true);
+                break;
+
+            case PlayerState.PickupSkull:
+                anim.SetBool("IsPickingUpSkull", true);
+                break;
+        }
+
+        //Debug.Log("Current State is now: " + newStateToChangeTo);
+        currPlayerState = newStateToChangeTo;
+    }
+
+    public void OnPlayerDeath()
+    {
+        ChangeState(PlayerState.Respawning);
+        StartCoroutine(EndPlayerRespawn());
+
+    }
+
+    private IEnumerator EndPlayerRespawn()
+    {
+        yield return new WaitForSeconds(playerRespawnCoolDown);
+        GameManager.instance.RespawnPlayer();
     }
 
     // Misc Utility Functions
