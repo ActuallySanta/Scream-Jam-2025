@@ -14,7 +14,7 @@ public enum PlayerState
 }
 
 [RequireComponent(typeof(Interactor))]
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IPlayer
 {
     //Basic Movement
     [Header("Movement")]
@@ -153,6 +153,10 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.collider.gameObject);
             hasHead = false;
         }
+        else if (collision.gameObject.CompareTag("Hazard"))
+        {
+            collision.gameObject.GetComponent<HazardController>().PerformHazard(this);
+        }
     }
 
 
@@ -168,8 +172,6 @@ public class PlayerController : MonoBehaviour
 
         if (moveInput.x != 0) ChangeState(PlayerState.Moving);
         else ChangeState(PlayerState.Idle);
-
-
     }
 
     public void OnJump(InputAction.CallbackContext context)
@@ -249,7 +251,6 @@ public class PlayerController : MonoBehaviour
     {
         ChangeState(PlayerState.Respawning);
         StartCoroutine(EndPlayerRespawn());
-
     }
 
     private IEnumerator EndPlayerRespawn()
@@ -287,6 +288,17 @@ public class PlayerController : MonoBehaviour
         //Draw a debug gizmo that shows the size of the ground check
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(groundCheckPos.position, groundCheckRad);
+    }
+
+    public void HurtPlayer()
+    {
+        Debug.Log("hurting player!");
+        // respawn logic
+    }
+
+    public void AddForce(Vector2 force, ForceMode2D mode = ForceMode2D.Force)
+    {
+        rb.AddForce(force, mode);
     }
 }
 

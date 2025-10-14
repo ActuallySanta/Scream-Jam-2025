@@ -114,7 +114,7 @@ public class GameManager : MonoBehaviour
     /// Add a candy instance to the list of acquired candies and notify all methods subscribed
     /// </summary>
     /// <param name="_candy">The accquired candy</param>
-    public void GetCandy(CandyObject _candy)
+    public void CollectCandy(CandyObject _candy)
     {
         if (!accquiredCandy.Contains(_candy))
         {
