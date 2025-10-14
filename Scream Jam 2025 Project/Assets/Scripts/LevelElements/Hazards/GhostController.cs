@@ -48,14 +48,16 @@ public class GhostController : HazardController
             : new Vector2(bounds.min.x, bounds.min.y);
 
         // Check for ground below that corner
-        bool isGroundAhead = Physics2D.Raycast(cornerOrigin, Vector2.down, groundCheckDistance, groundLayer);
+
+        //bool isGroundAhead = Physics2D.Raycast(cornerOrigin, Vector2.down, groundCheckDistance, groundLayer);
+        
 
         // Check for wall ahead
         Vector2 wallCheckDir = movingRight ? Vector2.right : Vector2.left;
         bool isWallAhead = Physics2D.Raycast(cornerOrigin, wallCheckDir, wallCheckDistance, wallLayer);
 
         // If no ground ahead or wall in front → flip
-        if (!isGroundAhead || isWallAhead)
+        if (/*!isGroundAhead || */isWallAhead)
         {
             Flip();
         }
