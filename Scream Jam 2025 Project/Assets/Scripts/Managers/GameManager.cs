@@ -68,7 +68,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
     /// <summary>
     /// Allow toggling of the debugging keybinds
     /// </summary>
