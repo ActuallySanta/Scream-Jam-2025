@@ -3,6 +3,7 @@ using UnityEngine;
 public class Checkpoint : MonoBehaviour
 {
     [SerializeField] private BoxCollider2D attachedCol;
+    [SerializeField] public bool returnHeadOnLoad { get; private set; }
 
     private void Start()
     {

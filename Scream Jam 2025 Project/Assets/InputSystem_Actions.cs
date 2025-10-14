@@ -180,6 +180,15 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ForceRespawn"",
+                    ""type"": ""Button"",
+                    ""id"": ""e2281193-f746-4fc4-b57e-11d9e0cefd41"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -576,6 +585,17 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Toggle Debugging"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e397ef11-9ad1-47af-b4d8-0a9b959e1495"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""ForceRespawn"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1173,6 +1193,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_Player_Next = m_Player.FindAction("Next", throwIfNotFound: true);
         m_Player_Sprint = m_Player.FindAction("Sprint", throwIfNotFound: true);
         m_Player_ToggleDebugging = m_Player.FindAction("Toggle Debugging", throwIfNotFound: true);
+        m_Player_ForceRespawn = m_Player.FindAction("ForceRespawn", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1276,6 +1297,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Next;
     private readonly InputAction m_Player_Sprint;
     private readonly InputAction m_Player_ToggleDebugging;
+    private readonly InputAction m_Player_ForceRespawn;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -1327,6 +1349,10 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/ToggleDebugging".
         /// </summary>
         public InputAction @ToggleDebugging => m_Wrapper.m_Player_ToggleDebugging;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/ForceRespawn".
+        /// </summary>
+        public InputAction @ForceRespawn => m_Wrapper.m_Player_ForceRespawn;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1383,6 +1409,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @ToggleDebugging.started += instance.OnToggleDebugging;
             @ToggleDebugging.performed += instance.OnToggleDebugging;
             @ToggleDebugging.canceled += instance.OnToggleDebugging;
+            @ForceRespawn.started += instance.OnForceRespawn;
+            @ForceRespawn.performed += instance.OnForceRespawn;
+            @ForceRespawn.canceled += instance.OnForceRespawn;
         }
 
         /// <summary>
@@ -1424,6 +1453,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @ToggleDebugging.started -= instance.OnToggleDebugging;
             @ToggleDebugging.performed -= instance.OnToggleDebugging;
             @ToggleDebugging.canceled -= instance.OnToggleDebugging;
+            @ForceRespawn.started -= instance.OnForceRespawn;
+            @ForceRespawn.performed -= instance.OnForceRespawn;
+            @ForceRespawn.canceled -= instance.OnForceRespawn;
         }
 
         /// <summary>
@@ -1794,6 +1826,13 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnToggleDebugging(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "ForceRespawn" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnForceRespawn(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.

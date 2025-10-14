@@ -23,10 +23,10 @@ public class PlayerController : MonoBehaviour, IPlayer
 
     //Head-throwing
     [Header("Head Throwing")]
-    [SerializeField] private GameObject headProjectile;
+    [SerializeField] private GameObject headProjectilePrefab;
     [SerializeField] private float throwVelocity;
     [SerializeField] private Transform headSpawnPoint;
-
+    public GameObject headInstance = null;
     private bool hasHead = false;
 
     //Timer
@@ -84,14 +84,20 @@ public class PlayerController : MonoBehaviour, IPlayer
         inputActions.Player.Interact.performed += HandleInteract;
         inputActions.Player.Interact.Enable();
 
+        inputActions.Player.ForceRespawn.performed += ForceRespawn;
+        inputActions.Player.ForceRespawn.Enable();
+
         //Copy this for the interact event
     }
+
+    
 
     private void OnDisable()
     {
         onMove.Disable();
         inputActions.Player.Throw.Disable();
         inputActions.Player.Jump.Disable();
+        inputActions.Player.ForceRespawn.Disable();
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -152,6 +158,7 @@ public class PlayerController : MonoBehaviour, IPlayer
             ChangeState(PlayerState.PickupSkull);
             Destroy(collision.collider.gameObject);
             hasHead = false;
+            headInstance = null;
         }
         else if (collision.gameObject.CompareTag("Hazard"))
         {
@@ -186,10 +193,10 @@ public class PlayerController : MonoBehaviour, IPlayer
     {
         if (!hasHead)
         {
-            GameObject head = Instantiate(headProjectile, headSpawnPoint.transform.position, Quaternion.identity);
-            head.transform.parent = null;
+            headInstance = Instantiate(headProjectilePrefab, headSpawnPoint.transform.position, Quaternion.identity);
+            headInstance.transform.parent = null;
 
-            head.GetComponent<Rigidbody2D>().AddForce(
+            headInstance.GetComponent<Rigidbody2D>().AddForce(
                 new Vector2(rb.linearVelocity.x + (Mathf.Sign(rb.linearVelocityX) * throwVelocity),
                 rb.linearVelocity.y + (Mathf.Sign(rb.linearVelocityY) * throwVelocity)),
                 ForceMode2D.Impulse);
@@ -261,6 +268,13 @@ public class PlayerController : MonoBehaviour, IPlayer
 
     // Misc Utility Functions
 
+    public void ResetHead()
+    {
+        Destroy(headInstance);
+        hasHead = true;
+        headInstance = null;
+    }
+
     public void SetCurrentInteractable(Interactable interactable)
     {
         //Debug.Log("Setting current interactable");
@@ -299,6 +313,11 @@ public class PlayerController : MonoBehaviour, IPlayer
     public void AddForce(Vector2 force, ForceMode2D mode = ForceMode2D.Force)
     {
         rb.AddForce(force, mode);
+    }
+
+    private void ForceRespawn(InputAction.CallbackContext obj)
+    {
+        GameManager.instance.RespawnPlayer();
     }
 }
 
