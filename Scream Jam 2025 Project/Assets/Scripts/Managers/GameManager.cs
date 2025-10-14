@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject playerPrefab;
     public delegate void OnPlayerRespawnEventHandler();
     public event OnPlayerRespawnEventHandler OnPlayerRespawn;
+    private InputAction respawnPlayer;
 
 
     //Checkpoints
@@ -127,11 +128,22 @@ public class GameManager : MonoBehaviour
     {
         if (currCheckpoint != null)
         {
+            Checkpoint checkpoint = currCheckpoint.GetComponent<Checkpoint>();
+
+            if (checkpoint.returnHeadOnLoad)
+            {
+                PlayerController playerController = playerGameObject.GetComponent<PlayerController>();
+                playerController.ResetHead();
+            }
+
             Destroy(playerGameObject);
             playerGameObject = null;
 
             OnPlayerRespawn?.Invoke();
             playerGameObject = Instantiate(playerPrefab, currCheckpoint.transform.position, Quaternion.identity);
+
+
+
         }
         else
         {
