@@ -11,6 +11,7 @@ public class DoorInteractable : MonoBehaviour
     private bool isUnlocked = false;
 
     private Collider2D collider;
+    private SpriteRenderer sprite;
 
     private void Awake()
     {
@@ -28,6 +29,7 @@ public class DoorInteractable : MonoBehaviour
         }
 
         collider = GetComponent<Collider2D>();
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -35,10 +37,12 @@ public class DoorInteractable : MonoBehaviour
         if (CheckConditionsMet())
         {
             collider.enabled = false;
+            sprite.color = Color.green;
         }
         else
         {
             collider.enabled = true;
+            sprite.color = Color.red;
         }
     }
 

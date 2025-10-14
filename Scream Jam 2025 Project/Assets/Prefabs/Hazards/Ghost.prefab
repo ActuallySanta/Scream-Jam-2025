@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 5406911026397043978}
   - component: {fileID: 3737683276582705675}
   - component: {fileID: 940602876749044851}
-  - component: {fileID: 8328613978953569074}
+  - component: {fileID: 2956799756898602901}
   m_Layer: 0
   m_Name: Ghost
   m_TagString: Untagged
@@ -60,8 +60,8 @@ Transform:
   m_GameObject: {fileID: 6554821763371470810}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.2, y: -1.78, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5263339743324639564}
@@ -170,8 +170,8 @@ MonoBehaviour:
   wallLayer:
     serializedVersion: 2
     m_Bits: 64
---- !u!61 &8328613978953569074
-BoxCollider2D:
+--- !u!58 &2956799756898602901
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -205,14 +205,4 @@ BoxCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 2}
-    newSize: {x: 1, y: 2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1, y: 2}
-  m_EdgeRadius: 0
+  m_Radius: 0.5
