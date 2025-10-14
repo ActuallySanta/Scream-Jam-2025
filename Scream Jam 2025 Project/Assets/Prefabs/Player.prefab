@@ -258,9 +258,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   jumpVelocity: 13
-  headProjectile: {fileID: 7256992955573663805, guid: f0460741b0959db45a9f932122341fe3, type: 3}
+  headProjectilePrefab: {fileID: 7256992955573663805, guid: f0460741b0959db45a9f932122341fe3, type: 3}
   throwVelocity: 2.5
   headSpawnPoint: {fileID: 7479271492604474588}
+  headInstance: {fileID: 0}
   pickupTimerReset: 0
   groundCheckPos: {fileID: 4065174677107443619}
   groundCheckRad: 0.45
