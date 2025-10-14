@@ -14,7 +14,7 @@ public enum PlayerState
 }
 
 [RequireComponent(typeof(Interactor))]
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IPlayer
 {
     //Basic Movement
     [Header("Movement")]
@@ -287,6 +287,18 @@ public class PlayerController : MonoBehaviour
         //Draw a debug gizmo that shows the size of the ground check
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(groundCheckPos.position, groundCheckRad);
+    }
+
+
+    // IPlayer implementations
+
+    void IPlayer.HurtPlayer() 
+    {
+        // Should respawn player and reset level
+    }
+    void IPlayer.AddForce(UnityEngine.Vector2 force, UnityEngine.ForceMode2D mode) 
+    {
+        rb.AddForce(force, mode);
     }
 }
 
