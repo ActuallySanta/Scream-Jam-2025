@@ -81,10 +81,7 @@ public class PlayerController : MonoBehaviour, IPlayer
 
     private void OnDisable()
     {
-        onMove.Disable();
-        inputActions.Player.Throw.Disable();
-        inputActions.Player.Jump.Disable();
-        inputActions.Player.ForceRespawn.Disable();
+
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
