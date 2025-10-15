@@ -1,0 +1,33 @@
+.menu-container {
+    justify-content: center;
+    align-self: stretch;
+    align-content: flex-start;
+    font-size: 20px;
+    -unity-text-align: upper-center;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    margin-left: 25%;
+    margin-right: 25%;
+    top: 50%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-top-left-radius: 17px;
+    border-top-right-radius: 17px;
+    border-bottom-right-radius: 17px;
+    border-bottom-left-radius: 17px;
+    bottom: auto;
+    left: auto;
+    right: auto;
+}
+
+.menu-container * {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+#GamePausedText {
+    font-size: 32px;
+    bottom: 10%;
+}

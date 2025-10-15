@@ -2,7 +2,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
+using System;
 
+[DefaultExecutionOrder(-1)]
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance { get; private set; }
@@ -14,7 +16,6 @@ public class GameManager : MonoBehaviour
     public event OnPlayerRespawnEventHandler OnPlayerRespawn;
     private InputAction respawnPlayer;
 
-
     //Checkpoints
     public GameObject currCheckpoint { get; private set; }
     public delegate void OnCheckpointChangeEventHandler();
@@ -22,13 +23,12 @@ public class GameManager : MonoBehaviour
 
     //Candy
     public List<CandyObject> accquiredCandy = new List<CandyObject>();
-    public delegate void OnCandyGetEventHandler();
-    public event OnCandyGetEventHandler OnCandyGet;
+    public int TotalCandyAccquired { get => accquiredCandy.Count; }
+    public event Action OnAddCandy;
 
     //Pause Menu
     public bool isPaused { get; private set; }
-    public delegate void OnPauseEventHandler();
-    public event OnPauseEventHandler OnPause;
+    public event Action OnPause;
 
     //Debug Mode
     public bool isDebugging { get; private set; }
@@ -51,8 +51,19 @@ public class GameManager : MonoBehaviour
         //Set the game object as persistent
         DontDestroyOnLoad(gameObject);
 
+        if (!InputManager.Instance.PlayerActionsEnabled)
+        {
+            InputManager.Instance.EnablePlayerEvents();
+        }
+        InputManager.Instance.OnPause += HandlePauseInput;
+
         //Initialize Bools
         isDebugging = false;
+    }
+
+    private void HandlePauseInput(InputAction.CallbackContext ctx)
+    {
+        TogglePause();
     }
 
     private void Update()
@@ -67,7 +78,6 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-
 
     /// <summary>
     /// Allow toggling of the debugging keybinds
@@ -87,11 +97,13 @@ public class GameManager : MonoBehaviour
 
         if (!isPaused)
         {
+            InputManager.Instance.EnablePlayerEvents();
             Time.timeScale = 1.0f;
             isPaused = false;
         }
         else
         {
+            InputManager.Instance.DisablePlayerEvents();
             Time.timeScale = 0;
             isPaused = true;
         }
@@ -119,7 +131,7 @@ public class GameManager : MonoBehaviour
     {
         if (!accquiredCandy.Contains(_candy))
         {
-            OnCandyGet?.Invoke();
+            OnAddCandy?.Invoke();
             accquiredCandy.Add(_candy);
         }
     }
@@ -141,9 +153,6 @@ public class GameManager : MonoBehaviour
 
             OnPlayerRespawn?.Invoke();
             playerGameObject = Instantiate(playerPrefab, currCheckpoint.transform.position, Quaternion.identity);
-
-
-
         }
         else
         {
