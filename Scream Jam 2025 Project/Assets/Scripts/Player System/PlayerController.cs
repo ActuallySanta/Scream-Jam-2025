@@ -164,7 +164,8 @@ public class PlayerController : MonoBehaviour, IPlayer
     {
         if (context.performed && Grounded())
         {
-            rb.linearVelocityY = jumpVelocity;
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
+            rb.AddForce(transform.up * jumpVelocity, ForceMode2D.Impulse);
         }
     }
 
