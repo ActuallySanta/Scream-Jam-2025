@@ -11,6 +11,7 @@ public class CandyCountUI : MonoBehaviour
         VisualElement root = uiDoc.rootVisualElement;
 
         scoreLabel = root.Q<Label>("CandyCount");
+        UpdateLabel();
 
         GameManager.instance.OnAddCandy += UpdateLabel;
     }
