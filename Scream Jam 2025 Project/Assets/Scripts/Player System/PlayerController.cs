@@ -172,16 +172,21 @@ public class PlayerController : MonoBehaviour, IPlayer
     {
         if (!hasHead)
         {
-            headInstance = Instantiate(headProjectilePrefab, headSpawnPoint.transform.position, Quaternion.identity);
+            headInstance = Instantiate(headProjectilePrefab, headSpawnPoint.position, Quaternion.identity);
             headInstance.transform.parent = null;
 
+            // Determine facing direction (left or right)
+            float facingDir = Mathf.Sign(transform.localScale.x);
+
+            // Throw horizontally in facing direction, preserve vertical velocity
             headInstance.GetComponent<Rigidbody2D>().AddForce(
-                new Vector2(rb.linearVelocity.x + (Mathf.Sign(rb.linearVelocityX) * throwVelocity),
-                rb.linearVelocity.y + (Mathf.Sign(rb.linearVelocityY) * throwVelocity)),
-                ForceMode2D.Impulse);
+                new Vector2(facingDir * throwVelocity + rb.linearVelocity.x, rb.linearVelocity.y + throwVelocity),
+                ForceMode2D.Impulse
+            );
+
+            hasHead = true;
+            pickupTimer = pickupTimerReset;
         }
-        hasHead = true;
-        pickupTimer = pickupTimerReset;
     }
 
     public void HandleInteract(InputAction.CallbackContext context)
