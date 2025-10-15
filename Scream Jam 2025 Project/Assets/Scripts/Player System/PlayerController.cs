@@ -312,6 +312,7 @@ public class PlayerController : MonoBehaviour, IPlayer
 
     public void AddForce(Vector2 force, ForceMode2D mode = ForceMode2D.Force)
     {
+        rb.linearVelocityY = 0;
         rb.AddForce(force, mode);
     }
 
