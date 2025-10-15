@@ -16,7 +16,6 @@ public class GameManager : MonoBehaviour
     public event OnPlayerRespawnEventHandler OnPlayerRespawn;
     private InputAction respawnPlayer;
 
-
     //Checkpoints
     public GameObject currCheckpoint { get; private set; }
     public delegate void OnCheckpointChangeEventHandler();
@@ -24,6 +23,7 @@ public class GameManager : MonoBehaviour
 
     //Candy
     public List<CandyObject> accquiredCandy = new List<CandyObject>();
+    public int TotalCandyAccquired { get => accquiredCandy.Count; }
     public event Action OnAddCandy;
 
     //Pause Menu
