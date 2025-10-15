@@ -52,11 +52,6 @@ public class PlayerController : MonoBehaviour, IPlayer
     //Player Input
     private InputSystem_Actions inputActions;
 
-    private InputAction onMove;
-    private InputAction onJump;
-    private InputAction onThrow;
-    private InputAction onInteract;
-
     private Vector2 moveInput;
 
     //Player State Machine
@@ -77,11 +72,11 @@ public class PlayerController : MonoBehaviour, IPlayer
         InputManager.Instance.OnInteract += HandleInteract;
     }
 
-    
-
     private void OnDisable()
     {
-
+        InputManager.Instance.OnJump -= Jump;
+        InputManager.Instance.OnThrow -= ThrowSkull;
+        InputManager.Instance.OnInteract += HandleInteract;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
