@@ -72,22 +72,9 @@ public class PlayerController : MonoBehaviour, IPlayer
 
     private void OnEnable()
     {
-        onMove = inputActions.Player.Move;
-        onMove.Enable();
-
-        inputActions.Player.Jump.performed += OnJump;
-        inputActions.Player.Jump.Enable();
-
-        inputActions.Player.Throw.performed += OnThrow;
-        inputActions.Player.Throw.Enable();
-
-        inputActions.Player.Interact.performed += HandleInteract;
-        inputActions.Player.Interact.Enable();
-
-        inputActions.Player.ForceRespawn.performed += ForceRespawn;
-        inputActions.Player.ForceRespawn.Enable();
-
-        //Copy this for the interact event
+        InputManager.Instance.OnJump += Jump;
+        InputManager.Instance.OnThrow += ThrowSkull;
+        InputManager.Instance.OnInteract += HandleInteract;
     }
 
     
@@ -170,7 +157,7 @@ public class PlayerController : MonoBehaviour, IPlayer
     // Input Action Functions
     public void GetMoveInput()
     {
-        moveInput = onMove.ReadValue<Vector2>();
+        moveInput = InputManager.Instance.MoveInput;
 
         if (moveInput.x != 0)
         {
@@ -181,7 +168,7 @@ public class PlayerController : MonoBehaviour, IPlayer
         else ChangeState(PlayerState.Idle);
     }
 
-    public void OnJump(InputAction.CallbackContext context)
+    public void Jump(InputAction.CallbackContext context)
     {
         if (context.performed && Grounded())
         {
@@ -189,7 +176,7 @@ public class PlayerController : MonoBehaviour, IPlayer
         }
     }
 
-    public void OnThrow(InputAction.CallbackContext context)
+    public void ThrowSkull(InputAction.CallbackContext context)
     {
         if (!hasHead)
         {

@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[DefaultExecutionOrder(-1)]
 public class InputManager : MonoBehaviour
 {
     private static InputManager instance;
@@ -12,6 +13,12 @@ public class InputManager : MonoBehaviour
     private InputAction jump;
     private InputAction skullThrow;
     private InputAction interact;
+
+    public event Action<InputAction.CallbackContext> OnJump;
+    public event Action<InputAction.CallbackContext> OnThrow;
+    public event Action<InputAction.CallbackContext> OnInteract;
+
+    public Vector2 MoveInput { get => move.ReadValue<Vector2>(); }
 
     public event Action<InputAction.CallbackContext> OnMove;
 
@@ -31,7 +38,20 @@ public class InputManager : MonoBehaviour
 
     private void OnEnable()
     {
-        
+        move = actions.Player.Move;
+        move.Enable();
+
+        jump = actions.Player.Jump;
+        jump.performed += HandleJumpPerformed;
+        jump.Enable();
+
+        skullThrow = actions.Player.Throw;
+        skullThrow.performed += HandleThrowPerformed;
+        skullThrow.Enable();
+
+        interact = actions.Player.Interact;
+        interact.performed += HandleInteractPerformed;
+        interact.Enable();
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -40,9 +60,18 @@ public class InputManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void HandleJumpPerformed(InputAction.CallbackContext ctx)
     {
-        
+        OnJump?.Invoke(ctx);
+    }
+
+    private void HandleThrowPerformed(InputAction.CallbackContext ctx)
+    {
+        OnThrow?.Invoke(ctx);
+    }
+
+    private void HandleInteractPerformed(InputAction.CallbackContext ctx)
+    {
+        OnInteract?.Invoke(ctx);
     }
 }

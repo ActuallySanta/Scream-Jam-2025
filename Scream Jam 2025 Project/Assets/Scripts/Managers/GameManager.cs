@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 
+[DefaultExecutionOrder(-1)]
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance { get; private set; }

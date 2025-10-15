@@ -24,7 +24,7 @@ public class PauseMenuUI : MonoBehaviour
 
         resumeButton.RegisterCallback<ClickEvent>(e =>
         {
-
+            ResumeGame();
         });
 
         if (rootElement.visible)
@@ -33,14 +33,13 @@ public class PauseMenuUI : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void ToggleVisibility()
     {
         rootElement.visible = !rootElement.visible;
+    }
+
+    private void ResumeGame()
+    {
+        GameManager.instance.TogglePause();
     }
 }
