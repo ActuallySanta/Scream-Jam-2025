@@ -10,6 +10,8 @@ public class DoorInteractable : MonoBehaviour
 
     private bool isUnlocked = false;
 
+    [SerializeField] private bool conditionUnlocks = true;
+
     private Collider2D collider;
     private SpriteRenderer sprite;
 
@@ -34,16 +36,34 @@ public class DoorInteractable : MonoBehaviour
 
     private void Update()
     {
-        if (CheckConditionsMet())
+        switch (conditionUnlocks)
         {
-            collider.enabled = false;
-            sprite.color = Color.green;
+            case true:
+                if (CheckConditionsMet())
+                {
+                    collider.enabled = false;
+                    sprite.color = Color.green;
+                }
+                else
+                {
+                    collider.enabled = true;
+                    sprite.color = Color.red;
+                }
+                break;
+            case false:
+                if (CheckConditionsMet())
+                {
+                    collider.enabled = true;
+                    sprite.color = Color.red;
+                }
+                else
+                {
+                    collider.enabled = false;
+                    sprite.color = Color.green;
+                }
+                break;
         }
-        else
-        {
-            collider.enabled = true;
-            sprite.color = Color.red;
-        }
+
     }
 
     private bool CheckConditionsMet()
