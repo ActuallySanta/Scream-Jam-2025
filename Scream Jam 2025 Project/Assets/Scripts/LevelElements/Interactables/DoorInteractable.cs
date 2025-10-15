@@ -17,18 +17,25 @@ public class DoorInteractable : MonoBehaviour
 
     private void Awake()
     {
-        // Filter only components that implement IUnlockCondition
-        foreach (var comp in conditionComponents)
+        if (conditionComponents.Count > 0)
         {
-            if (comp is IUnlockCondition condition)
+            // Filter only components that implement IUnlockCondition
+            foreach (var comp in conditionComponents)
             {
-                conditions.Add(condition);
-            }   
-            else
-            {
-                Debug.LogWarning($"{comp.name} does not implement IUnlockCondition!");
+                if (comp != null && comp is IUnlockCondition condition)
+                {
+                    conditions.Add(condition);
+                }
+                else
+                {
+                    Debug.LogWarning($"{comp.name} does not implement IUnlockCondition!");
+                }
             }
         }
+        else
+        {
+            Debug.LogWarning("No unlock conditions are on this door. Is this intentional?");
+        }    
 
         collider = GetComponent<Collider2D>();
         sprite = GetComponent<SpriteRenderer>();

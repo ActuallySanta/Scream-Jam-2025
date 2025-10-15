@@ -95,7 +95,7 @@ public class GameManager : MonoBehaviour
     {
         OnPause?.Invoke();
 
-        if (!isPaused)
+        if (isPaused)
         {
             InputManager.Instance.EnablePlayerEvents();
             Time.timeScale = 1.0f;

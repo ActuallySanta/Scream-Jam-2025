@@ -60,6 +60,7 @@ public class InputManager : MonoBehaviour
 
         pause = actions.Player.Pause;
         pause.performed += HandlePausePerformed;
+        pause.Enable();
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -100,7 +101,6 @@ public class InputManager : MonoBehaviour
         jump.Enable();
         skullThrow.Enable();
         interact.Enable();
-        pause.Enable();
     }
 
     public void DisablePlayerEvents()
@@ -109,7 +109,6 @@ public class InputManager : MonoBehaviour
         move.Disable();
         jump.Disable(); 
         skullThrow.Disable(); 
-        interact.Disable(); 
-        pause.Disable();
+        interact.Disable();
     }
 }
