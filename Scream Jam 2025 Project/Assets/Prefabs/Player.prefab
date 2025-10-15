@@ -257,7 +257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  jumpVelocity: 13
+  jumpVelocity: 17
   headProjectilePrefab: {fileID: 7256992955573663805, guid: f0460741b0959db45a9f932122341fe3, type: 3}
   throwVelocity: 2.5
   headSpawnPoint: {fileID: 7479271492604474588}
@@ -367,7 +367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ec8e7dffa128cd4786049dbbd1aaae3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionRadius: 0
+  interactionRadius: 2
   interactionMask:
     serializedVersion: 2
     m_Bits: 256
