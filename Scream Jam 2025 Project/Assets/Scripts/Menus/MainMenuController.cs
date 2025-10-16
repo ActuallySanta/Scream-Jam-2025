@@ -6,7 +6,7 @@ using UnityEngine.Audio;
 public class MainMenuController : MonoBehaviour
 {
     public UIDocument uiDocument;
-    public AudioMixer audioMixer;
+    ///public AudioMixer audioMixer;
 
     private VisualElement root;
 
@@ -27,14 +27,14 @@ public class MainMenuController : MonoBehaviour
 
         if (gameSlider != null)
         {
-            gameSlider.RegisterValueChangedCallback(evt =>
-                audioMixer.SetFloat("GameVolume", Mathf.Log10(Mathf.Max(evt.newValue, 0.0001f)) * 20));
+            //gameSlider.RegisterValueChangedCallback(evt =>
+                //audioMixer.SetFloat("GameVolume", Mathf.Log10(Mathf.Max(evt.newValue, 0.0001f)) * 20));
         }
 
         if (musicSlider != null)
         {
-            musicSlider.RegisterValueChangedCallback(evt =>
-                audioMixer.SetFloat("MusicVolume", Mathf.Log10(Mathf.Max(evt.newValue, 0.0001f)) * 20));
+            //musicSlider.RegisterValueChangedCallback(evt =>
+                //audioMixer.SetFloat("MusicVolume", Mathf.Log10(Mathf.Max(evt.newValue, 0.0001f)) * 20));
         }
 
         // Return Buttons
