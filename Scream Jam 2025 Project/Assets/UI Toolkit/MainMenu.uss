@@ -118,3 +118,11 @@ Button {
     width: 100px;
     height: 100px;
 }
+
+  Text{
+	  unity-font: "Fantasypixelfont";
+  }
+
+.root {
+    background-color: transparent; /* or use a custom color like #1e1e1e */
+}
