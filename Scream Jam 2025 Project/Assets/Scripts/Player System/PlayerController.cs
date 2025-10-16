@@ -154,12 +154,16 @@ public class PlayerController : MonoBehaviour, IPlayer
             thrownHead = false;
             headInstance = null;
         }
-        else if (collision.gameObject.CompareTag("Hazard"))
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Hazard"))
         {
+            Debug.Log("Hazard!");
             collision.gameObject.GetComponent<HazardController>().PerformHazard(this);
         }
     }
-
 
     // Input Action Functions
     public void GetMoveInput()
