@@ -1,28 +1,22 @@
 fileFormatVersion: 2
-guid: d4fd8a058f41af64892d930fdc2488ab
+guid: f4737d555c61b9846b8fb05d8a88e11a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9209400502226253313
-    second: jump spritesheet_0
+      213: -3813320423821029385
+    second: idle headless spritesheet_0
   - first:
-      213: 9152237105809273586
-    second: jump spritesheet_1
+      213: -8547245475826931353
+    second: idle headless spritesheet_1
   - first:
-      213: 8582081406857595789
-    second: jump spritesheet_2
+      213: 8324033310625643160
+    second: idle headless spritesheet_2
   - first:
-      213: 2619322863875554231
-    second: jump spritesheet_3
+      213: 3634408426128580937
+    second: idle headless spritesheet_3
   - first:
-      213: -2332029425962674485
-    second: jump spritesheet_4
-  - first:
-      213: -7739699735934951768
-    second: jump spritesheet_5
-  - first:
-      213: 8693066033271808079
-    second: jump spritesheet_6
+      213: -2135900315495196023
+    second: idle headless spritesheet_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -55,7 +49,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -69,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 350
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -93,7 +87,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -131,111 +125,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: jump spritesheet_0
+      name: idle headless spritesheet_0
       rect:
         serializedVersion: 2
-        x: 131
-        y: 965
+        x: 329
+        y: 1469
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ffc763474d541bc0800000000000000
+      internalID: -3813320423821029385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle headless spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 1025
         width: 338
-        height: 650
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        height: 434
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ff900866903a13080800000000000000
-      internalID: -9209400502226253313
+      spriteID: 76965456685126980800000000000000
+      internalID: -8547245475826931353
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump spritesheet_3
+      name: idle headless spritesheet_2
       rect:
         serializedVersion: 2
-        x: 593
-        y: 1081
-        width: 356
-        height: 661
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7bb7c555444b95420800000000000000
-      internalID: 2619322863875554231
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump spritesheet_4
-      rect:
-        serializedVersion: 2
-        x: 1073
-        y: 965
-        width: 356
-        height: 727
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bc69cbbb797f2afd0800000000000000
-      internalID: -2332029425962674485
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump spritesheet_5
-      rect:
-        serializedVersion: 2
-        x: 131
-        y: 161
+        x: 557
+        y: 1025
         width: 338
-        height: 632
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8ae996bc810179490800000000000000
-      internalID: -7739699735934951768
+      spriteID: 89a3c528138e48370800000000000000
+      internalID: 8324033310625643160
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump spritesheet_6
+      name: idle headless spritesheet_3
       rect:
         serializedVersion: 2
-        x: 605
-        y: 161
+        x: 1007
+        y: 1025
         width: 338
-        height: 674
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        height: 416
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f402e2adf79f3a870800000000000000
-      internalID: 8693066033271808079
+      spriteID: 941a4182533007230800000000000000
+      internalID: 3634408426128580937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle headless spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 245
+        width: 338
+        height: 416
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98a9343caf1cb52e0800000000000000
+      internalID: -2135900315495196023
       vertices: []
       indices: 
       edges: []
@@ -244,7 +238,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 8c70f328ab6398542ae58b345ca1f42f
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -254,13 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      jump spritesheet_0: -9209400502226253313
-      jump spritesheet_1: 9152237105809273586
-      jump spritesheet_2: 8582081406857595789
-      jump spritesheet_3: 2619322863875554231
-      jump spritesheet_4: -2332029425962674485
-      jump spritesheet_5: -7739699735934951768
-      jump spritesheet_6: 8693066033271808079
+      idle headless spritesheet_0: -3813320423821029385
+      idle headless spritesheet_1: -8547245475826931353
+      idle headless spritesheet_2: 8324033310625643160
+      idle headless spritesheet_3: 3634408426128580937
+      idle headless spritesheet_4: -2135900315495196023
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

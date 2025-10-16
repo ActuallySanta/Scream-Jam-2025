@@ -1,40 +1,28 @@
 fileFormatVersion: 2
-guid: 74f37870afbdb464fa98b173dbb1f111
+guid: d4fd8a058f41af64892d930fdc2488ab
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1249315516356297173
-    second: dead spritesheet_0
+      213: -9209400502226253313
+    second: jump spritesheet_0
   - first:
-      213: -2005849869864601722
-    second: dead spritesheet_1
+      213: 9152237105809273586
+    second: jump spritesheet_1
   - first:
-      213: -5852476144072976233
-    second: dead spritesheet_2
+      213: 8582081406857595789
+    second: jump spritesheet_2
   - first:
-      213: 4109365647538651177
-    second: dead spritesheet_3
+      213: 2619322863875554231
+    second: jump spritesheet_3
   - first:
-      213: -1706860896482856603
-    second: dead spritesheet_4
+      213: -2332029425962674485
+    second: jump spritesheet_4
   - first:
-      213: -6758827366261173077
-    second: dead spritesheet_5
+      213: -7739699735934951768
+    second: jump spritesheet_5
   - first:
-      213: -4097106390311388124
-    second: dead spritesheet_6
-  - first:
-      213: 841040761553134712
-    second: dead spritesheet_7
-  - first:
-      213: -4031131494620825178
-    second: dead spritesheet_8
-  - first:
-      213: -4740763634326551817
-    second: dead spritesheet_9
-  - first:
-      213: -8495273791666265590
-    second: dead spritesheet_10
+      213: 8693066033271808079
+    second: jump spritesheet_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,39 +127,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dead spritesheet_2
+      name: jump spritesheet_0
       rect:
         serializedVersion: 2
-        x: 1115
-        y: 1007
-        width: 367
-        height: 644
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 798151864f3d7cea0800000000000000
-      internalID: -5852476144072976233
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dead spritesheet_3
-      rect:
-        serializedVersion: 2
-        x: 83
-        y: 1007
+        x: 131
+        y: 965
         width: 338
-        height: 685
+        height: 650
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,20 +159,64 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9200cb9b846670930800000000000000
-      internalID: 4109365647538651177
+      spriteID: ff900866903a13080800000000000000
+      internalID: -9209400502226253313
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dead spritesheet_4
+      name: jump spritesheet_3
       rect:
         serializedVersion: 2
-        x: 599
-        y: 1007
+        x: 593
+        y: 1081
+        width: 356
+        height: 661
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bb7c555444b95420800000000000000
+      internalID: 2619322863875554231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 965
+        width: 356
+        height: 727
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc69cbbb797f2afd0800000000000000
+      internalID: -2332029425962674485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 161
         width: 338
-        height: 739
+        height: 632
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,20 +225,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5617228de030058e0800000000000000
-      internalID: -1706860896482856603
+      spriteID: 8ae996bc810179490800000000000000
+      internalID: -7739699735934951768
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dead spritesheet_6
+      name: jump spritesheet_6
       rect:
         serializedVersion: 2
-        x: 83
-        y: 266
-        width: 415
-        height: 518
+        x: 605
+        y: 161
+        width: 338
+        height: 674
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,52 +247,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 42cb18602772427c0800000000000000
-      internalID: -4097106390311388124
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dead spritesheet_8
-      rect:
-        serializedVersion: 2
-        x: 599
-        y: 272
-        width: 398
-        height: 266
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6a97c34734b8e08c0800000000000000
-      internalID: -4031131494620825178
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dead spritesheet_10
-      rect:
-        serializedVersion: 2
-        x: 803
-        y: 266
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a02eb021f79ba1a80800000000000000
-      internalID: -8495273791666265590
+      spriteID: f402e2adf79f3a870800000000000000
+      internalID: 8693066033271808079
       vertices: []
       indices: 
       edges: []
@@ -278,7 +257,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 4c98b28a08e62fe4dbd3563c2a7192cf
+    spriteID: 8c70f328ab6398542ae58b345ca1f42f
     internalID: 0
     vertices: []
     indices: 
@@ -288,17 +267,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      dead spritesheet_0: 1249315516356297173
-      dead spritesheet_1: -2005849869864601722
-      dead spritesheet_10: -8495273791666265590
-      dead spritesheet_2: -5852476144072976233
-      dead spritesheet_3: 4109365647538651177
-      dead spritesheet_4: -1706860896482856603
-      dead spritesheet_5: -6758827366261173077
-      dead spritesheet_6: -4097106390311388124
-      dead spritesheet_7: 841040761553134712
-      dead spritesheet_8: -4031131494620825178
-      dead spritesheet_9: -4740763634326551817
+      jump spritesheet_0: -9209400502226253313
+      jump spritesheet_1: 9152237105809273586
+      jump spritesheet_2: 8582081406857595789
+      jump spritesheet_3: 2619322863875554231
+      jump spritesheet_4: -2332029425962674485
+      jump spritesheet_5: -7739699735934951768
+      jump spritesheet_6: 8693066033271808079
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
