@@ -23,6 +23,8 @@ public class MainMenuController : MonoBehaviour
         root.Q<Button>("creditsButton").clicked += () => ShowInfo("Credits", "Project Lead: Santiago Benitez-Fernandez\nMain Artist: Taylor Fraizer\nProgrammers: Cooper Fleishman, Kyle Benjamin, Emma Duprey, Santiago Benitez-Fernandez\nMain Level Designer: Kyle Benjamin\nUI Assets from BarelyApes\nBackground Music from Dark Fantasy Studio");
         //root.Q<Button>("quitButton").clicked += Application.Quit;
 
+        root.Q<Button>("quitButton").clicked += () => QuitGame();
+
         // Settings Sliders
         var gameSlider = root.Q<Slider>("gameVolume");
         var musicSlider = root.Q<Slider>("musicVolume");
@@ -30,13 +32,13 @@ public class MainMenuController : MonoBehaviour
         if (gameSlider != null)
         {
             //gameSlider.RegisterValueChangedCallback(evt =>
-                //audioMixer.SetFloat("GameVolume", Mathf.Log10(Mathf.Max(evt.newValue, 0.0001f)) * 20));
+            //audioMixer.SetFloat("GameVolume", Mathf.Log10(Mathf.Max(evt.newValue, 0.0001f)) * 20));
         }
 
         if (musicSlider != null)
         {
             //musicSlider.RegisterValueChangedCallback(evt =>
-                //audioMixer.SetFloat("MusicVolume", Mathf.Log10(Mathf.Max(evt.newValue, 0.0001f)) * 20));
+            //audioMixer.SetFloat("MusicVolume", Mathf.Log10(Mathf.Max(evt.newValue, 0.0001f)) * 20));
         }
 
         // Return Buttons
@@ -57,7 +59,7 @@ public class MainMenuController : MonoBehaviour
         }
     }
 
-    void ShowInfo(string title, string content)
+    private void ShowInfo(string title, string content)
     {
         var overlay = root.Q<VisualElement>("infoOverlay");
         var titleLabel = root.Q<Label>("infoTitle");
@@ -74,9 +76,15 @@ public class MainMenuController : MonoBehaviour
         };
     }
 
-    void ShowPasswordPrompt()
+    private void ShowPasswordPrompt()
     {
         // Stubbed logic — you can replace this with a password input field and validation
         Debug.Log("Password prompt triggered. Implement your password logic here.");
+    }
+
+    private void QuitGame()
+    {
+        Debug.Log("Quitting!");
+        Application.Quit();
     }
 }
