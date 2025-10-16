@@ -98,6 +98,7 @@ public class PlayerController : MonoBehaviour, IPlayer
     void Update()
     {
         GetMoveInput();
+        anim.SetBool("HasHead", !thrownHead);
 
         if (currPlayerState == PlayerState.Respawning) return;
 
@@ -115,10 +116,11 @@ public class PlayerController : MonoBehaviour, IPlayer
                 rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, rb.linearVelocityY);
                 break;
 
-                case PlayerState.Idle:
+            case PlayerState.Idle:
                 rb.linearVelocity = Vector2.zero;
                 break;
-        };
+        }
+        ;
     }
     private void FixedUpdate()
     {
@@ -140,7 +142,6 @@ public class PlayerController : MonoBehaviour, IPlayer
             ChangeState(PlayerState.PickupSkull);
             Destroy(collision.collider.gameObject);
             thrownHead = false;
-            anim.SetBool("HasHead", true);
             headInstance = null;
         }
         else if (collision.gameObject.CompareTag("Hazard"))
@@ -179,6 +180,10 @@ public class PlayerController : MonoBehaviour, IPlayer
         {
             headInstance = Instantiate(headProjectilePrefab, headSpawnPoint.position, Quaternion.identity);
             headInstance.transform.parent = null;
+            headInstance.transform.localScale =
+                new Vector3(Mathf.Sign(transform.localScale.x) * headInstance.transform.localScale.x,
+                headInstance.transform.localScale.y,
+                headInstance.transform.localScale.z);
 
             // Determine facing direction (left or right)
             float facingDir = Mathf.Sign(transform.localScale.x);
@@ -190,7 +195,6 @@ public class PlayerController : MonoBehaviour, IPlayer
             );
 
             thrownHead = true;
-            anim.SetBool("HasHead",false);
             pickupTimer = pickupTimerReset;
         }
     }
@@ -210,7 +214,7 @@ public class PlayerController : MonoBehaviour, IPlayer
         //Set all bools to false
         foreach (AnimatorControllerParameter item in anim.parameters)
         {
-            anim.SetBool(item.name, false);
+            if (item.name != "HasHead") anim.SetBool(item.name, false);
         }
 
         switch (newStateToChangeTo)
@@ -240,7 +244,7 @@ public class PlayerController : MonoBehaviour, IPlayer
                 break;
         }
 
-        //Debug.Log("Current State is now: " + newStateToChangeTo);
+        Debug.Log("Current State is now: " + newStateToChangeTo);
         currPlayerState = newStateToChangeTo;
     }
 
@@ -261,7 +265,7 @@ public class PlayerController : MonoBehaviour, IPlayer
     public void ResetHead()
     {
         Destroy(headInstance);
-        thrownHead = true;
+        thrownHead = false;
         headInstance = null;
     }
 
