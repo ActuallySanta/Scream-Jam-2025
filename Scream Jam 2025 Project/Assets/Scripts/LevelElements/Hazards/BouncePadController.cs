@@ -25,7 +25,7 @@ public class BouncePadController : HazardController
         if (collision.gameObject.CompareTag("Player"))
         {
             sr.sprite = steppedOnSprite;
-        }   
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)

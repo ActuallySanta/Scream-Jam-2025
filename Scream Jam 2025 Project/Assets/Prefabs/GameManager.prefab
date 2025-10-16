@@ -49,6 +49,7 @@ MonoBehaviour:
   playerGameObject: {fileID: 0}
   playerPrefab: {fileID: 7819505692149693740, guid: 153b360dae1e21f4dbf330abad56f786, type: 3}
   accquiredCandy: []
+  totalCandy: 3
 --- !u!114 &2010354220181735389
 MonoBehaviour:
   m_ObjectHideFlags: 0
