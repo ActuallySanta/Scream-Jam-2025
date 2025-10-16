@@ -92,3 +92,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attachedCol: {fileID: 5091453090386345942}
+  returnHeadOnLoad: 1
