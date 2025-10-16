@@ -59,15 +59,14 @@ public class MainMenuController : MonoBehaviour
     {
         var overlay = root.Q<VisualElement>("infoOverlay");
         var titleLabel = root.Q<Label>("infoTitle");
-        var scrollView = root.Q<ScrollView>("infoText");
+        var contentLabel = root.Q<Label>("contentText");
 
         titleLabel.text = title;
-        scrollView.Clear();
-        scrollView.Add(new Label(content));
+        contentLabel.text = content;
 
         overlay.style.display = DisplayStyle.Flex;
 
-        root.Q<Button>("closeInfo").clicked += () =>
+        root.Q<Button>("backButton").clicked += () =>
         {
             overlay.style.display = DisplayStyle.None;
         };
