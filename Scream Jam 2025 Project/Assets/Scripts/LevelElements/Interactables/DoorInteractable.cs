@@ -7,13 +7,15 @@ public class DoorInteractable : MonoBehaviour
 {
     [SerializeField] private List<MonoBehaviour> conditionComponents = new(); // assign in inspector
     private List<IUnlockCondition> conditions = new();
+    [SerializeField] private Sprite openDoorSprite;
+    [SerializeField] private Sprite closeDoorSprite;
 
     private bool isUnlocked = false;
 
-    [SerializeField] private bool conditionUnlocks = true;
+    [SerializeField] private bool inverseConditional = true;
 
     private Collider2D collider;
-    private SpriteRenderer sprite;
+    private SpriteRenderer sr;
 
     private void Awake()
     {
@@ -38,39 +40,42 @@ public class DoorInteractable : MonoBehaviour
         }    
 
         collider = GetComponent<Collider2D>();
-        sprite = GetComponent<SpriteRenderer>();
+        sr = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
     {
-        switch (conditionUnlocks)
+        switch (inverseConditional)
         {
             case true:
                 if (CheckConditionsMet())
                 {
                     collider.enabled = false;
-                    sprite.color = Color.green;
+                    sr.sprite = openDoorSprite;
+                    //sprite.color = Color.green;
                 }
                 else
                 {
                     collider.enabled = true;
-                    sprite.color = Color.red;
+                    sr.sprite = closeDoorSprite;
+                    //sprite.color = Color.red;
                 }
                 break;
             case false:
                 if (CheckConditionsMet())
                 {
                     collider.enabled = true;
-                    sprite.color = Color.red;
+                    sr.sprite = closeDoorSprite;
+                    //sprite.color = Color.red;
                 }
                 else
                 {
                     collider.enabled = false;
-                    sprite.color = Color.green;
+                    sr.sprite = openDoorSprite;
+                    //sprite.color = Color.green;
                 }
                 break;
         }
-
     }
 
     private bool CheckConditionsMet()
@@ -84,21 +89,4 @@ public class DoorInteractable : MonoBehaviour
         }
         return true;
     }
-    /*
-    public override void Interact()
-    {
-        base.Interact();
-
-        Debug.Log("Door used!");
-
-        if (isUnlocked)
-        {
-            Debug.Log("Door is unlocked! lemme in");
-        }
-        else
-        {
-            Debug.Log("Door is not unlocked. BLOCKED");
-        }
-    }
-    */
 }
