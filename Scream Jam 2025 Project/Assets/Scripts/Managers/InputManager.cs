@@ -14,12 +14,14 @@ public class InputManager : MonoBehaviour
     private InputAction skullThrow;
     private InputAction interact;
     private InputAction pause;
+    private InputAction forceRespawn;
 
     public event Action<InputAction.CallbackContext> OnMove;
     public event Action<InputAction.CallbackContext> OnJump;
     public event Action<InputAction.CallbackContext> OnThrow;
     public event Action<InputAction.CallbackContext> OnInteract;
     public event Action<InputAction.CallbackContext> OnPause;
+    public event Action<InputAction.CallbackContext> OnForceRespawn;
 
     /// <summary>
     /// Vector2 value of the move input
@@ -58,9 +60,12 @@ public class InputManager : MonoBehaviour
         interact = actions.Player.Interact;
         interact.performed += HandleInteractPerformed;
 
+        forceRespawn = actions.Player.ForceRespawn;
+        forceRespawn.performed += HandleForceRespawnPerformed;
+
         pause = actions.Player.Pause;
         pause.performed += HandlePausePerformed;
-        pause.Enable();
+        pause.Enable(); // this needs to be enabled seperatly
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -94,21 +99,34 @@ public class InputManager : MonoBehaviour
         OnPause?.Invoke(ctx);
     }
 
-    public void EnablePlayerEvents()
+    private void HandleForceRespawnPerformed(InputAction.CallbackContext ctx)
+    {
+        OnForceRespawn?.Invoke(ctx);
+    }
+
+    /// <summary>
+    /// Enables all input events related to player movement
+    /// </summary>
+    public void EnablePlayerMovementActions()
     {
         playerActionsEnabled = true;
         move.Enable();
         jump.Enable();
         skullThrow.Enable();
         interact.Enable();
+        forceRespawn.Enable();
     }
 
-    public void DisablePlayerEvents()
+    /// <summary>
+    /// Disables all input events related to player movement
+    /// </summary>
+    public void DisablePlayerMovementActions()
     {
         playerActionsEnabled = false;
         move.Disable();
-        jump.Disable(); 
-        skullThrow.Disable(); 
+        jump.Disable();
+        skullThrow.Disable();
         interact.Disable();
+        forceRespawn.Disable();
     }
 }

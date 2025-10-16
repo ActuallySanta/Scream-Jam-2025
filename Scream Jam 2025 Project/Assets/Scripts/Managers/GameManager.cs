@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
 
         if (!InputManager.Instance.PlayerActionsEnabled)
         {
-            InputManager.Instance.EnablePlayerEvents();
+            InputManager.Instance.EnablePlayerMovementActions();
         }
         InputManager.Instance.OnPause += HandlePauseInput;
 
@@ -97,13 +97,13 @@ public class GameManager : MonoBehaviour
 
         if (isPaused)
         {
-            InputManager.Instance.EnablePlayerEvents();
+            InputManager.Instance.EnablePlayerMovementActions();
             Time.timeScale = 1.0f;
             isPaused = false;
         }
         else
         {
-            InputManager.Instance.DisablePlayerEvents();
+            InputManager.Instance.DisablePlayerMovementActions();
             Time.timeScale = 0;
             isPaused = true;
         }

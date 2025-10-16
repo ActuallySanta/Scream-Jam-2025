@@ -70,13 +70,15 @@ public class PlayerController : MonoBehaviour, IPlayer
         InputManager.Instance.OnJump += Jump;
         InputManager.Instance.OnThrow += ThrowSkull;
         InputManager.Instance.OnInteract += HandleInteract;
+        InputManager.Instance.OnForceRespawn += HandleForceRespawn;
     }
 
     private void OnDisable()
     {
         InputManager.Instance.OnJump -= Jump;
         InputManager.Instance.OnThrow -= ThrowSkull;
-        InputManager.Instance.OnInteract += HandleInteract;
+        InputManager.Instance.OnInteract -= HandleInteract;
+        InputManager.Instance.OnForceRespawn -= HandleForceRespawn;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -112,10 +114,7 @@ public class PlayerController : MonoBehaviour, IPlayer
                 // Move the player horizontally
                 rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, rb.linearVelocityY);
                 break;
-
-        }
-        ;
-
+        };
     }
     private void FixedUpdate()
     {
@@ -301,7 +300,7 @@ public class PlayerController : MonoBehaviour, IPlayer
         rb.AddForce(force, mode);
     }
 
-    private void ForceRespawn(InputAction.CallbackContext obj)
+    private void HandleForceRespawn(InputAction.CallbackContext obj)
     {
         GameManager.instance.RespawnPlayer();
     }
