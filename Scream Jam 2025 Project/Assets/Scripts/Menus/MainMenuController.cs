@@ -17,8 +17,10 @@ public class MainMenuController : MonoBehaviour
         // Main Menu Buttons
         root.Q<Button>("playButton").clicked += () => SceneManager.LoadScene("Game");
         root.Q<Button>("loadButton").clicked += ShowPasswordPrompt;
-        root.Q<Button>("howToButton").clicked += () => ShowInfo("How to Play", "Use arrow keys to move.\nPress Z to shoot.\nAvoid spikes!");
-        root.Q<Button>("creditsButton").clicked += () => ShowInfo("Credits", "Game by Emma Duprey\nArt by PixelPal\nMusic by ChiptuneMaster");
+        root.Q<Button>("howToButton").clicked += () => ShowInfo("How to Play", "Use arrow keys to move.\Click LMB to shoot.");
+
+        //TODO: Update credits
+        root.Q<Button>("creditsButton").clicked += () => ShowInfo("Credits", "Game by Santi Benitez...Emma Duprey\nArt by Taylor\nUI Assets from BarelyApes\nBackground Music from Dark Fantasy Studio");
         //root.Q<Button>("quitButton").clicked += Application.Quit;
 
         // Settings Sliders
