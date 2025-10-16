@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 [RequireComponent(typeof(UIDocument))]
@@ -27,6 +28,16 @@ public class PauseMenuUI : MonoBehaviour
             ResumeGame();
         });
 
+        mainMenuButton.RegisterCallback<ClickEvent>(e =>
+        {
+            ReturnToMainMenu();
+        });
+
+        quitButton.RegisterCallback<ClickEvent>(e =>
+        {
+            QuitGame();
+        });
+
         if (rootElement.visible)
         {
             ToggleVisibility();
@@ -41,5 +52,19 @@ public class PauseMenuUI : MonoBehaviour
     private void ResumeGame()
     {
         GameManager.instance.TogglePause();
+    }
+
+    private void ReturnToMainMenu()
+    {
+        Debug.Log("Main menuing!");
+        //SceneManager.LoadScene("");
+    }
+
+    private void QuitGame()
+    {
+        Debug.Log("Quitting!");
+        Application.Quit();
+        
+        // can replace w diff quitting mechanism if needbe
     }
 }
