@@ -52,11 +52,6 @@ public class PlayerController : MonoBehaviour, IPlayer
     //Player Input
     private InputSystem_Actions inputActions;
 
-    private InputAction onMove;
-    private InputAction onJump;
-    private InputAction onThrow;
-    private InputAction onInteract;
-
     private Vector2 moveInput;
 
     //Player State Machine
@@ -72,32 +67,18 @@ public class PlayerController : MonoBehaviour, IPlayer
 
     private void OnEnable()
     {
-        onMove = inputActions.Player.Move;
-        onMove.Enable();
-
-        inputActions.Player.Jump.performed += OnJump;
-        inputActions.Player.Jump.Enable();
-
-        inputActions.Player.Throw.performed += OnThrow;
-        inputActions.Player.Throw.Enable();
-
-        inputActions.Player.Interact.performed += HandleInteract;
-        inputActions.Player.Interact.Enable();
-
-        inputActions.Player.ForceRespawn.performed += ForceRespawn;
-        inputActions.Player.ForceRespawn.Enable();
-
-        //Copy this for the interact event
+        InputManager.Instance.OnJump += Jump;
+        InputManager.Instance.OnThrow += ThrowSkull;
+        InputManager.Instance.OnInteract += HandleInteract;
+        InputManager.Instance.OnForceRespawn += HandleForceRespawn;
     }
-
-    
 
     private void OnDisable()
     {
-        onMove.Disable();
-        inputActions.Player.Throw.Disable();
-        inputActions.Player.Jump.Disable();
-        inputActions.Player.ForceRespawn.Disable();
+        InputManager.Instance.OnJump -= Jump;
+        InputManager.Instance.OnThrow -= ThrowSkull;
+        InputManager.Instance.OnInteract -= HandleInteract;
+        InputManager.Instance.OnForceRespawn -= HandleForceRespawn;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -134,9 +115,10 @@ public class PlayerController : MonoBehaviour, IPlayer
                 rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, rb.linearVelocityY);
                 break;
 
-        }
-        ;
-
+                case PlayerState.Idle:
+                rb.linearVelocity = Vector2.zero;
+                break;
+        };
     }
     private void FixedUpdate()
     {
@@ -170,7 +152,7 @@ public class PlayerController : MonoBehaviour, IPlayer
     // Input Action Functions
     public void GetMoveInput()
     {
-        moveInput = onMove.ReadValue<Vector2>();
+        moveInput = InputManager.Instance.MoveInput;
 
         if (moveInput.x != 0)
         {
@@ -181,28 +163,34 @@ public class PlayerController : MonoBehaviour, IPlayer
         else ChangeState(PlayerState.Idle);
     }
 
-    public void OnJump(InputAction.CallbackContext context)
+    public void Jump(InputAction.CallbackContext context)
     {
         if (context.performed && Grounded())
         {
-            rb.linearVelocityY = jumpVelocity;
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
+            rb.AddForce(transform.up * jumpVelocity, ForceMode2D.Impulse);
         }
     }
 
-    public void OnThrow(InputAction.CallbackContext context)
+    public void ThrowSkull(InputAction.CallbackContext context)
     {
         if (!hasHead)
         {
-            headInstance = Instantiate(headProjectilePrefab, headSpawnPoint.transform.position, Quaternion.identity);
+            headInstance = Instantiate(headProjectilePrefab, headSpawnPoint.position, Quaternion.identity);
             headInstance.transform.parent = null;
 
+            // Determine facing direction (left or right)
+            float facingDir = Mathf.Sign(transform.localScale.x);
+
+            // Throw horizontally in facing direction, preserve vertical velocity
             headInstance.GetComponent<Rigidbody2D>().AddForce(
-                new Vector2(rb.linearVelocity.x + (Mathf.Sign(rb.linearVelocityX) * throwVelocity),
-                rb.linearVelocity.y + (Mathf.Sign(rb.linearVelocityY) * throwVelocity)),
-                ForceMode2D.Impulse);
+                new Vector2(facingDir * throwVelocity + rb.linearVelocity.x, rb.linearVelocity.y + throwVelocity),
+                ForceMode2D.Impulse
+            );
+
+            hasHead = true;
+            pickupTimer = pickupTimerReset;
         }
-        hasHead = true;
-        pickupTimer = pickupTimerReset;
     }
 
     public void HandleInteract(InputAction.CallbackContext context)
@@ -316,7 +304,7 @@ public class PlayerController : MonoBehaviour, IPlayer
         rb.AddForce(force, mode);
     }
 
-    private void ForceRespawn(InputAction.CallbackContext obj)
+    private void HandleForceRespawn(InputAction.CallbackContext obj)
     {
         GameManager.instance.RespawnPlayer();
     }
