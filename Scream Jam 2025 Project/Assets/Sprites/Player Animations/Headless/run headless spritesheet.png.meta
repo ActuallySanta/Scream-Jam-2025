@@ -127,31 +127,22 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
-    - serializedVersion: 2
-      name: run headless spritesheet_0
-      rect:
-        serializedVersion: 2
-        x: 1181
-        y: 1463
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2daac44ce634246d0800000000000000
-      internalID: -3007767458111247662
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: run headless spritesheet_1
       rect:
@@ -214,50 +205,6 @@ TextureImporter:
       bones: []
       spriteID: 27960ee0f13645830800000000000000
       internalID: 4058978149212383602
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: run headless spritesheet_4
-      rect:
-        serializedVersion: 2
-        x: 1457
-        y: 1355
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 88093425a5e225020800000000000000
-      internalID: 2328974922766061704
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: run headless spritesheet_5
-      rect:
-        serializedVersion: 2
-        x: 131
-        y: 635
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f48f3a5fa97cf32b0800000000000000
-      internalID: -5602539943065552817
       vertices: []
       indices: 
       edges: []
