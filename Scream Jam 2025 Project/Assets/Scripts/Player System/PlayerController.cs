@@ -34,9 +34,18 @@ public class PlayerController : MonoBehaviour, IPlayer
     [SerializeField] private float pickupTimerReset;
     private float pickupTimer = 0.0f;
 
+    //Collider Scaling
+    [Header("ColliderScaling")]
+    [Header("With Head")]
+    [SerializeField] private Vector2 headColliderSize;
+    [SerializeField] private Vector2 headColliderOffset;
+    [Header("Headless")]
+    [SerializeField] private Vector2 headlessColliderSize;
+    [SerializeField] private Vector2 headlessColliderOffset;
+
     // Components
     private Rigidbody2D rb;
-    private CapsuleCollider2D collider;
+    private BoxCollider2D collider;
     private Animator anim;
 
     //Ground Check
@@ -85,7 +94,7 @@ public class PlayerController : MonoBehaviour, IPlayer
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        collider = GetComponent<CapsuleCollider2D>();
+        collider = GetComponent<BoxCollider2D>();
         anim = GetComponent<Animator>();
 
         interactorComponent = GetComponent<Interactor>();
@@ -99,6 +108,7 @@ public class PlayerController : MonoBehaviour, IPlayer
     {
         GetMoveInput();
         anim.SetBool("HasHead", !thrownHead);
+        ChangeColliderSizeForHead();
 
         if (currPlayerState == PlayerState.Respawning) return;
 
@@ -313,6 +323,20 @@ public class PlayerController : MonoBehaviour, IPlayer
     private void HandleForceRespawn(InputAction.CallbackContext obj)
     {
         GameManager.instance.RespawnPlayer();
+    }
+
+    private void ChangeColliderSizeForHead()
+    {
+        if (thrownHead)
+        {
+            collider.size = headlessColliderSize;
+            collider.offset = headlessColliderOffset;
+        }
+        else
+        {
+            collider.size = headColliderSize;
+            collider.offset = headColliderOffset;
+        }
     }
 }
 

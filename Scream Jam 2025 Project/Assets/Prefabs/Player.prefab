@@ -120,8 +120,12 @@ MonoBehaviour:
   headSpawnPoint: {fileID: 7479271492604474588}
   headInstance: {fileID: 0}
   pickupTimerReset: 0
+  headColliderSize: {x: 0.6960531, y: 1.952898}
+  headColliderOffset: {x: 0, y: -0.013705015}
+  headlessColliderSize: {x: 0.6960531, y: 1.2275124}
+  headlessColliderOffset: {x: 0, y: -0.37639785}
   groundCheckPos: {fileID: 4065174677107443619}
-  groundCheckRad: 0.45
+  groundCheckRad: 0.35
   groundLayers:
     serializedVersion: 2
     m_Bits: 64
@@ -225,17 +229,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.0426825, y: -0.23558778}
+  m_Offset: {x: 0, y: -0.013705015}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 0.9657143, y: 1.24}
+    newSize: {x: 0.9657143, y: 1.24}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.6960531, y: 1.5091325}
+  m_Size: {x: 0.6960531, y: 1.952898}
   m_EdgeRadius: 0
 --- !u!1 &7917864141427669751
 GameObject:
