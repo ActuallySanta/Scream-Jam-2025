@@ -3,7 +3,6 @@
         <ui:Label text="Main Menu" class="title" />
         <ui:Button name="playButton" text="Play" />
         <ui:Button name="loadButton" text="Load Game" />
-        <ui:Button name="settingsButton" text="Settings" />
         <ui:Button name="howToButton" text="How to Play" />
         <ui:Button name="creditsButton" text="Credits" />
     </ui:VisualElement>
