@@ -364,6 +364,9 @@ AnimatorTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: IsThrowingSkull
     m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: HasHead
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -7882726719550737603}
   m_Solo: 0
@@ -464,6 +467,9 @@ AnimatorTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: IsMoving
     m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: HasHead
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2061589909231877495}
   m_Solo: 0
@@ -481,7 +487,7 @@ AnimatorTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: IsMoving
     m_EventTreshold: 0
-  - m_ConditionMode: 1
+  - m_ConditionMode: 2
     m_ConditionEvent: HasHead
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
@@ -525,6 +531,9 @@ AnimatorTransition:
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: IsRespawning
+    m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: HasHead
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1276439018741346355}
