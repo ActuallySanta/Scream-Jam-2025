@@ -8,46 +8,74 @@ public class MainMenuController : MonoBehaviour
     public UIDocument uiDocument;
     public AudioMixer audioMixer;
 
+    private VisualElement root;
+
     void Start()
     {
-        var root = uiDocument.rootVisualElement;
+        root = uiDocument.rootVisualElement;
 
-        root.Q<Button>("playButton").clicked += () => SceneManager.LoadScene("Game");
+        // Main Menu Buttons
+        root.Q<Button>("playButton").clicked += () => SceneManager.LoadScene("GameScene");
         root.Q<Button>("loadButton").clicked += ShowPasswordPrompt;
-        //settings may be a moot point
         root.Q<Button>("settingsButton").clicked += () => TogglePanel("settingsPanel");
-        root.Q<Button>("howToButton").clicked += () => ShowInfo("How to Play", "Use arrows to move, Z to shoot...");
-        root.Q<Button>("creditsButton").clicked += () => ShowInfo("Credits", "Game by... \n Assets used...");
-        root.Q<Button>("quitButton").clicked += () => Application.Quit();
+        root.Q<Button>("howToButton").clicked += () => ShowInfo("How to Play", "Use arrow keys to move.\nPress Z to shoot.\nAvoid spikes!");
+        root.Q<Button>("creditsButton").clicked += () => ShowInfo("Credits", "Game by Emma Duprey\nArt by PixelPal\nMusic by ChiptuneMaster");
+        root.Q<Button>("quitButton").clicked += Application.Quit;
 
-        //If we wanted to do music controls:
-        //var gameSlider = root.Q<Slider>("gameVolume");
-        //var musicSlider = root.Q<Slider>("musicVolume");
+        // Settings Sliders
+        var gameSlider = root.Q<Slider>("gameVolume");
+        var musicSlider = root.Q<Slider>("musicVolume");
 
-        //gameSlider?.RegisterValueChangedCallback(evt => audioMixer.SetFloat("GameVolume", Mathf.Log10(evt.newValue) * 20));
-        //musicSlider?.RegisterValueChangedCallback(evt => audioMixer.SetFloat("MusicVolume", Mathf.Log10(evt.newValue) * 20));
+        if (gameSlider != null)
+        {
+            gameSlider.RegisterValueChangedCallback(evt =>
+                audioMixer.SetFloat("GameVolume", Mathf.Log10(Mathf.Max(evt.newValue, 0.0001f)) * 20));
+        }
 
-        root.Q<Button>("backButton")?.RegisterCallback<ClickEvent>(evt => TogglePanel("mainMenu"));
+        if (musicSlider != null)
+        {
+            musicSlider.RegisterValueChangedCallback(evt =>
+                audioMixer.SetFloat("MusicVolume", Mathf.Log10(Mathf.Max(evt.newValue, 0.0001f)) * 20));
+        }
+
+        // Return Buttons
+        //root.Q<Button>("backButton")?.clicked += () => TogglePanel("mainMenu");
     }
 
     void TogglePanel(string panelName)
     {
-        foreach (var panel in uiDocument.rootVisualElement.Children())
+        foreach (var panel in root.Children())
+        {
             panel.style.display = DisplayStyle.None;
+        }
 
-        uiDocument.rootVisualElement.Q<VisualElement>(panelName).style.display = DisplayStyle.Flex;
+        var targetPanel = root.Q<VisualElement>(panelName);
+        if (targetPanel != null)
+        {
+            targetPanel.style.display = DisplayStyle.Flex;
+        }
     }
 
     void ShowInfo(string title, string content)
     {
         TogglePanel("infoPanel");
-        uiDocument.rootVisualElement.Q<Label>("infoTitle").text = title;
-        uiDocument.rootVisualElement.Q<ScrollView>("infoText").Clear();
-        uiDocument.rootVisualElement.Q<ScrollView>("infoText").Add(new Label(content));
+
+        var titleLabel = root.Q<Label>("infoTitle");
+        var scrollView = root.Q<ScrollView>("infoText");
+
+        if (titleLabel != null) titleLabel.text = title;
+        if (scrollView != null)
+        {
+            scrollView.Clear();
+            scrollView.Add(new Label(content));
+        }
+
+        //root.Q<Button>("backButton")?.clicked += () => TogglePanel("mainMenu");
     }
 
     void ShowPasswordPrompt()
     {
-        // Add password logic here
+        // Stubbed logic — you can replace this with a password input field and validation
+        Debug.Log("Password prompt triggered. Implement your password logic here.");
     }
 }

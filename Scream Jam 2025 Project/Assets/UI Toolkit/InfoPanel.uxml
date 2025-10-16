@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:VisualElement name="infoPanel" class="menu-container">
+        <ui:Label name="infoTitle" text="Info Title" class="title" />
+        <ui:ScrollView name="infoText" class="info-panel" />
+        <ui:Button name="backButton" text="Return to Main" class="back-button" />
+    </ui:VisualElement>
+</ui:UXML>

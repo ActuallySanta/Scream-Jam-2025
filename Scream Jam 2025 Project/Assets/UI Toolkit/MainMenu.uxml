@@ -6,4 +6,5 @@
         <ui:Button name="howToButton" text="How to Play" />
         <ui:Button name="creditsButton" text="Credits" />
     </ui:VisualElement>
+
 </ui:UXML>
