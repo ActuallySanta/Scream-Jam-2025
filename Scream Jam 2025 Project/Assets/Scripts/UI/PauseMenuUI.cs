@@ -5,11 +5,14 @@ using UnityEngine.UIElements;
 public class PauseMenuUI : MonoBehaviour
 {
     [SerializeField] private UIDocument uiDoc;
+    [SerializeField] public Button pauseButton;
 
     private VisualElement rootElement;
     private Button resumeButton;
     private Button mainMenuButton;
     private Button quitButton;
+
+    //private Button pauseButton;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -22,10 +25,14 @@ public class PauseMenuUI : MonoBehaviour
         mainMenuButton = rootElement.Q<Button>("MainMenuButton");
         quitButton = rootElement.Q<Button>("QuitButton");
 
+        //pauseButton = rootElement.Q<Button>("pasueButton");
+
         resumeButton.RegisterCallback<ClickEvent>(e =>
         {
             ResumeGame();
         });
+
+        pauseButton?.RegisterCallback<ClickEvent>(e => TriggerPause());
 
         if (rootElement.visible)
         {
@@ -40,6 +47,12 @@ public class PauseMenuUI : MonoBehaviour
 
     private void ResumeGame()
     {
+        GameManager.instance.TogglePause();
+    }
+
+    private void TriggerPause()
+    {
+        Debug.Log("ts should pause");
         GameManager.instance.TogglePause();
     }
 }
