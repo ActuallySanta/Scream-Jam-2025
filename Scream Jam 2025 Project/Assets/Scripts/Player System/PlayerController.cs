@@ -188,6 +188,7 @@ public class PlayerController : MonoBehaviour, IPlayer
     {
         if (!thrownHead)
         {
+            anim.SetBool("HasHead", false);
             headInstance = Instantiate(headProjectilePrefab, headSpawnPoint.position, Quaternion.identity);
             headInstance.transform.parent = null;
             headInstance.transform.localScale =
