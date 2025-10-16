@@ -17,7 +17,7 @@ public class MainMenuController : MonoBehaviour
         //settings may be a moot point
         root.Q<Button>("settingsButton").clicked += () => TogglePanel("settingsPanel");
         root.Q<Button>("howToButton").clicked += () => ShowInfo("How to Play", "Use arrows to move, Z to shoot...");
-        root.Q<Button>("creditsButton").clicked += () => ShowInfo("Credits", "Game by...");
+        root.Q<Button>("creditsButton").clicked += () => ShowInfo("Credits", "Game by... \n Assets used...");
         root.Q<Button>("quitButton").clicked += () => Application.Quit();
 
         //If we wanted to do music controls:
