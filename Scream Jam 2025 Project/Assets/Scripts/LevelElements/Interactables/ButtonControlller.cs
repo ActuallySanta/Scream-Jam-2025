@@ -6,6 +6,8 @@ public class ButtonControlller : MonoBehaviour, IUnlockCondition
 {
     [SerializeField] private Sprite pressedSprite;
     [SerializeField] private Sprite releaseSprite;
+    [SerializeField] private Color pressedColor;
+    [SerializeField] private Color releaseColor;
 
     public event Action OnButtonPressed;
     public event Action OnButtonReleased;
@@ -51,10 +53,12 @@ public class ButtonControlller : MonoBehaviour, IUnlockCondition
         if (pressed)
         {
             sr.sprite = pressedSprite;
+            //sr.color = pressedColor;
         }
         else
         {
             sr.sprite = releaseSprite;
+            //sr.color = releaseColor;
         }
     } 
 }

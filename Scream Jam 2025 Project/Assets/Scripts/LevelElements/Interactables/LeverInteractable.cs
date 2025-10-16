@@ -12,7 +12,7 @@ public class LeverInteractable : Interactable, IUnlockCondition
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
-        sr.color = Color.red;
+        //sr.color = Color.red;
     }
 
     public override void Interact()
@@ -22,12 +22,12 @@ public class LeverInteractable : Interactable, IUnlockCondition
         if (!pulled)
         {
             pulled = true;
-            sr.color = Color.green;
+            //sr.color = Color.green;
         }
         else
         {
             pulled = false;
-            sr.color = Color.red;
+            //sr.color = Color.red;
         }
 
         transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
