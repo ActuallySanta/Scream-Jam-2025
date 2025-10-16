@@ -6,5 +6,11 @@
         <ui:Button name="howToButton" text="How to Play" />
         <ui:Button name="creditsButton" text="Credits" />
     </ui:VisualElement>
-
+	<ui:VisualElement name="infoOverlay" class="info-overlay" style="display: none;">
+  <ui:VisualElement class="info-box">
+    <ui:Button name="closeInfo" text="?" class="close-button" />
+    <ui:Label name="infoTitle" class="info-title" text="Info Title" />
+    <ui:ScrollView name="infoText" class="info-content" />
+  </ui:VisualElement>
+</ui:VisualElement>
 </ui:UXML>

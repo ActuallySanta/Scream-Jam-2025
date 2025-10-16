@@ -20,3 +20,27 @@ Button {
   color: #fff;
   border-radius: 4px;
 }
+
+.info-overlay {
+  @apply absolute top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-60 z-50;
+}
+
+.info-box {
+  @apply w-[500px] max-h-[600px] bg-gray-900 text-white p-6 rounded-lg shadow-xl flex flex-col gap-4;
+}
+
+.info-title {
+  @apply text-2xl font-bold text-cyan-400;
+}
+
+.info-content {
+  @apply overflow-y-auto text-sm bg-gray-800 p-4 rounded h-[300px];
+}
+
+.close-button {
+  @apply self-end text-white bg-red-600 hover:bg-red-700 px-3 py-1 rounded text-lg font-bold;
+}
+
+.title {
+  font-family: "Fantasypixelfont";
+}

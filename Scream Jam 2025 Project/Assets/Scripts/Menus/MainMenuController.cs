@@ -15,12 +15,11 @@ public class MainMenuController : MonoBehaviour
         root = uiDocument.rootVisualElement;
 
         // Main Menu Buttons
-        root.Q<Button>("playButton").clicked += () => SceneManager.LoadScene("GameScene");
+        root.Q<Button>("playButton").clicked += () => SceneManager.LoadScene("Game");
         root.Q<Button>("loadButton").clicked += ShowPasswordPrompt;
-        root.Q<Button>("settingsButton").clicked += () => TogglePanel("settingsPanel");
         root.Q<Button>("howToButton").clicked += () => ShowInfo("How to Play", "Use arrow keys to move.\nPress Z to shoot.\nAvoid spikes!");
         root.Q<Button>("creditsButton").clicked += () => ShowInfo("Credits", "Game by Emma Duprey\nArt by PixelPal\nMusic by ChiptuneMaster");
-        root.Q<Button>("quitButton").clicked += Application.Quit;
+        //root.Q<Button>("quitButton").clicked += Application.Quit;
 
         // Settings Sliders
         var gameSlider = root.Q<Slider>("gameVolume");
@@ -58,19 +57,20 @@ public class MainMenuController : MonoBehaviour
 
     void ShowInfo(string title, string content)
     {
-        TogglePanel("infoPanel");
-
+        var overlay = root.Q<VisualElement>("infoOverlay");
         var titleLabel = root.Q<Label>("infoTitle");
         var scrollView = root.Q<ScrollView>("infoText");
 
-        if (titleLabel != null) titleLabel.text = title;
-        if (scrollView != null)
-        {
-            scrollView.Clear();
-            scrollView.Add(new Label(content));
-        }
+        titleLabel.text = title;
+        scrollView.Clear();
+        scrollView.Add(new Label(content));
 
-        //root.Q<Button>("backButton")?.clicked += () => TogglePanel("mainMenu");
+        overlay.style.display = DisplayStyle.Flex;
+
+        root.Q<Button>("closeInfo").clicked += () =>
+        {
+            overlay.style.display = DisplayStyle.None;
+        };
     }
 
     void ShowPasswordPrompt()
