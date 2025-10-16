@@ -127,7 +127,7 @@ public class PlayerController : MonoBehaviour, IPlayer
                 break;
 
             case PlayerState.Idle:
-                rb.linearVelocity = Vector2.zero;
+                rb.linearVelocity = new Vector2(0,rb.linearVelocity.y);
                 break;
         }
         ;
@@ -255,7 +255,7 @@ public class PlayerController : MonoBehaviour, IPlayer
                 break;
         }
 
-        Debug.Log("Current State is now: " + newStateToChangeTo);
+        //Debug.Log("Current State is now: " + newStateToChangeTo);
         currPlayerState = newStateToChangeTo;
     }
 
@@ -317,7 +317,7 @@ public class PlayerController : MonoBehaviour, IPlayer
 
     public void AddForce(Vector2 force, ForceMode2D mode = ForceMode2D.Force)
     {
-        rb.linearVelocityY = 0;
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
         rb.AddForce(force, mode);
     }
 

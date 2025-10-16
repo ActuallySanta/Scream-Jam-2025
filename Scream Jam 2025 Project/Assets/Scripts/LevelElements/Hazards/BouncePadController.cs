@@ -9,8 +9,14 @@ public class BouncePadController : HazardController
 
     private SpriteRenderer sr;
 
+    private void Start()
+    {
+        sr = GetComponent<SpriteRenderer>();
+    }
+
     public override void PerformHazard(IPlayer player)
     {
+        Debug.Log("Bouncing!");
         player.AddForce(transform.up * force, forceMode);
     }
 
