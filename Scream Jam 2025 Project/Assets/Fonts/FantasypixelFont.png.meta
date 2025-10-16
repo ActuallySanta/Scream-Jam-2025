@@ -1,0 +1,2366 @@
+fileFormatVersion: 2
+guid: 392a846c9bf00144b99e903c9ce6e7ec
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5496216327919238656
+    second: FantasypixelFont_0
+  - first:
+      213: -2233231422128699118
+    second: FantasypixelFont_1
+  - first:
+      213: 9141744183909050439
+    second: FantasypixelFont_2
+  - first:
+      213: 2605159460766322348
+    second: FantasypixelFont_3
+  - first:
+      213: -1077929041097087964
+    second: FantasypixelFont_4
+  - first:
+      213: 7053105739778495688
+    second: FantasypixelFont_5
+  - first:
+      213: -4740083904142362734
+    second: FantasypixelFont_6
+  - first:
+      213: 4843506636089001140
+    second: FantasypixelFont_7
+  - first:
+      213: -2966139227222901482
+    second: FantasypixelFont_8
+  - first:
+      213: -7893157819729073426
+    second: FantasypixelFont_9
+  - first:
+      213: -5385266775713928056
+    second: FantasypixelFont_10
+  - first:
+      213: 8476236763815670861
+    second: FantasypixelFont_11
+  - first:
+      213: 2524664510322640319
+    second: FantasypixelFont_12
+  - first:
+      213: 1054267281630891941
+    second: FantasypixelFont_13
+  - first:
+      213: 3197770082920868898
+    second: FantasypixelFont_14
+  - first:
+      213: 8400904699326501587
+    second: FantasypixelFont_15
+  - first:
+      213: -3061810842970865166
+    second: FantasypixelFont_16
+  - first:
+      213: -6049627222533644982
+    second: FantasypixelFont_17
+  - first:
+      213: -3821620470417802070
+    second: FantasypixelFont_18
+  - first:
+      213: 833991506913212853
+    second: FantasypixelFont_19
+  - first:
+      213: -4861427654000675416
+    second: FantasypixelFont_20
+  - first:
+      213: 237238815068464046
+    second: FantasypixelFont_21
+  - first:
+      213: -6299856810274412708
+    second: FantasypixelFont_22
+  - first:
+      213: 7659651305755433294
+    second: FantasypixelFont_23
+  - first:
+      213: 3201435098419862047
+    second: FantasypixelFont_24
+  - first:
+      213: -706778388435141987
+    second: FantasypixelFont_25
+  - first:
+      213: 7138070107064923125
+    second: FantasypixelFont_26
+  - first:
+      213: 5017610993474773646
+    second: FantasypixelFont_27
+  - first:
+      213: 1445230076581074648
+    second: FantasypixelFont_28
+  - first:
+      213: 6921021711764610696
+    second: FantasypixelFont_29
+  - first:
+      213: 5573524026203572197
+    second: FantasypixelFont_30
+  - first:
+      213: 5192420430353881393
+    second: FantasypixelFont_31
+  - first:
+      213: 5063102440222973464
+    second: FantasypixelFont_32
+  - first:
+      213: -3610756549959443256
+    second: FantasypixelFont_33
+  - first:
+      213: 881497055573669688
+    second: FantasypixelFont_34
+  - first:
+      213: 6621320402963974858
+    second: FantasypixelFont_35
+  - first:
+      213: 207535296576069130
+    second: FantasypixelFont_36
+  - first:
+      213: -2362915997035374532
+    second: FantasypixelFont_37
+  - first:
+      213: 6734928398695891490
+    second: FantasypixelFont_38
+  - first:
+      213: 6523953996929690274
+    second: FantasypixelFont_39
+  - first:
+      213: -7391717867677427381
+    second: FantasypixelFont_40
+  - first:
+      213: -6313993577466217531
+    second: FantasypixelFont_41
+  - first:
+      213: 2555315806634717066
+    second: FantasypixelFont_42
+  - first:
+      213: 2655781066059524530
+    second: FantasypixelFont_43
+  - first:
+      213: 3804420489602459515
+    second: FantasypixelFont_44
+  - first:
+      213: -7471220935566295591
+    second: FantasypixelFont_45
+  - first:
+      213: -8506582968499933215
+    second: FantasypixelFont_46
+  - first:
+      213: 3694604669578563786
+    second: FantasypixelFont_47
+  - first:
+      213: -5565127141174551854
+    second: FantasypixelFont_48
+  - first:
+      213: -5246364376708436806
+    second: FantasypixelFont_49
+  - first:
+      213: -1741466720070056750
+    second: FantasypixelFont_50
+  - first:
+      213: 8917427371830583898
+    second: FantasypixelFont_51
+  - first:
+      213: -501639154883776169
+    second: FantasypixelFont_52
+  - first:
+      213: -9153351662654592782
+    second: FantasypixelFont_53
+  - first:
+      213: -7758668246836866293
+    second: FantasypixelFont_54
+  - first:
+      213: -5375549937185958557
+    second: FantasypixelFont_55
+  - first:
+      213: 2358346778645060032
+    second: FantasypixelFont_56
+  - first:
+      213: -3998612619687586476
+    second: FantasypixelFont_57
+  - first:
+      213: 5539784980044629032
+    second: FantasypixelFont_58
+  - first:
+      213: -504926809848284077
+    second: FantasypixelFont_59
+  - first:
+      213: -2419728835342165532
+    second: FantasypixelFont_60
+  - first:
+      213: 3387643565915518297
+    second: FantasypixelFont_61
+  - first:
+      213: -1250076240085472263
+    second: FantasypixelFont_62
+  - first:
+      213: -4322595523591904076
+    second: FantasypixelFont_63
+  - first:
+      213: 2626679535562887111
+    second: FantasypixelFont_64
+  - first:
+      213: -3450113636430706097
+    second: FantasypixelFont_65
+  - first:
+      213: 7338741472202429279
+    second: FantasypixelFont_66
+  - first:
+      213: -2197348672496994478
+    second: FantasypixelFont_67
+  - first:
+      213: 3227564578597380464
+    second: FantasypixelFont_68
+  - first:
+      213: -2452610087907046716
+    second: FantasypixelFont_69
+  - first:
+      213: 8648053148053552179
+    second: FantasypixelFont_70
+  - first:
+      213: 4120356750041095915
+    second: FantasypixelFont_71
+  - first:
+      213: 3279627279574617232
+    second: FantasypixelFont_72
+  - first:
+      213: -7405760926889241672
+    second: FantasypixelFont_73
+  - first:
+      213: -4666340645060730863
+    second: FantasypixelFont_74
+  - first:
+      213: 697972690275354159
+    second: FantasypixelFont_75
+  - first:
+      213: 8484753364397264383
+    second: FantasypixelFont_76
+  - first:
+      213: 4594320667035970084
+    second: FantasypixelFont_77
+  - first:
+      213: -3330334552221226736
+    second: FantasypixelFont_78
+  - first:
+      213: -2823678864296098396
+    second: FantasypixelFont_79
+  - first:
+      213: 5495538930895669555
+    second: FantasypixelFont_80
+  - first:
+      213: 8941155419153027638
+    second: FantasypixelFont_81
+  - first:
+      213: -3925788285338704389
+    second: FantasypixelFont_82
+  - first:
+      213: 8355250678165846173
+    second: FantasypixelFont_83
+  - first:
+      213: -480434257596898160
+    second: FantasypixelFont_84
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FantasypixelFont_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 225
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00ef35a41ab764c40800000000000000
+      internalID: 5496216327919238656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_1
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 227
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21947ce8ad7f101e0800000000000000
+      internalID: -2233231422128699118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_2
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 227
+        width: 10
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 748646576effdde70800000000000000
+      internalID: 9141744183909050439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_3
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 227
+        width: 10
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cae89321ab2672420800000000000000
+      internalID: 2605159460766322348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_4
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 227
+        width: 8
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 424a45c8f3d6a01f0800000000000000
+      internalID: -1077929041097087964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_5
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 227
+        width: 8
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c414c62d4aa1e160800000000000000
+      internalID: 7053105739778495688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_6
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 227
+        width: 8
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2973c00adc6d73eb0800000000000000
+      internalID: -4740083904142362734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_7
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 227
+        width: 8
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b4055f9f97973340800000000000000
+      internalID: 4843506636089001140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_8
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 227
+        width: 9
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61df60f861826d6d0800000000000000
+      internalID: -2966139227222901482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_9
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 204
+        width: 22
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eeaa3fe58ced57290800000000000000
+      internalID: -7893157819729073426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_10
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 229
+        width: 12
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88cabdc5660b345b0800000000000000
+      internalID: -5385266775713928056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_11
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 231
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d44f65b7d64a1a570800000000000000
+      internalID: 8476236763815670861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_12
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 231
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb501d2fef8690320800000000000000
+      internalID: 2524664510322640319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_13
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 231
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5af0de3c18281ae00800000000000000
+      internalID: 1054267281630891941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_14
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 231
+        width: 16
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22caed9a2f2c06c20800000000000000
+      internalID: 3197770082920868898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_15
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 231
+        width: 16
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d2144b6052069470800000000000000
+      internalID: 8400904699326501587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_16
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 231
+        width: 10
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f1484fa2434285d0800000000000000
+      internalID: -3061810842970865166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_17
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 231
+        width: 10
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4d5959e7186b0ca0800000000000000
+      internalID: -6049627222533644982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_18
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 245
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aacb2621e60e6fac0800000000000000
+      internalID: -3821620470417802070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_19
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 233
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b9314b5bdee29b00800000000000000
+      internalID: 833991506913212853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_20
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 233
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a5770e3e4db88cb0800000000000000
+      internalID: -4861427654000675416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_21
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 233
+        width: 12
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea327130277da4300800000000000000
+      internalID: 237238815068464046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 202
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c57a4cfeb996298a0800000000000000
+      internalID: -6299856810274412708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_23
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 202
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e49d8eea74c8c4a60800000000000000
+      internalID: 7659651305755433294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_24
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 204
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1a98c49248cd6c20800000000000000
+      internalID: 3201435098419862047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_25
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 204
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9a7666ecc40136f0800000000000000
+      internalID: -706778388435141987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_26
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 208
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f3707971f48f0360800000000000000
+      internalID: 7138070107064923125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_27
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 208
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e82a8273d9222a540800000000000000
+      internalID: 5017610993474773646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_28
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 208
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d65355f81d7e0410800000000000000
+      internalID: 1445230076581074648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_29
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 208
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88ede74e3986c0060800000000000000
+      internalID: 6921021711764610696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_30
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 208
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e708f07292295d40800000000000000
+      internalID: 5573524026203572197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_31
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 208
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13959bbeede2f0840800000000000000
+      internalID: 5192420430353881393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_32
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 210
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81e57ea08d0c34640800000000000000
+      internalID: 5063102440222973464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_33
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 187
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cc90456c0404edc0800000000000000
+      internalID: -3610756549959443256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_34
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 187
+        width: 10
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8377504d6e4bb3c00800000000000000
+      internalID: 881497055573669688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_35
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 210
+        width: 8
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acac6b243d7a3eb50800000000000000
+      internalID: 6621320402963974858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 179
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0e95cea04051e200800000000000000
+      internalID: 207535296576069130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_37
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 179
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c385e928b6c353fd0800000000000000
+      internalID: -2362915997035374532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_38
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 179
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22285f702b5477d50800000000000000
+      internalID: 6734928398695891490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_39
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 181
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2aaebf5489db98a50800000000000000
+      internalID: 6523953996929690274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_40
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 181
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b49dd2923c75b6990800000000000000
+      internalID: -7391717867677427381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_41
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 181
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cb37055b403068a0800000000000000
+      internalID: -6313993577466217531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_42
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 185
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8f276fff2e467320800000000000000
+      internalID: 2555315806634717066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_43
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 162
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b9afa30fca3bd420800000000000000
+      internalID: 2655781066059524530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_44
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 185
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b77e8f257440cc430800000000000000
+      internalID: 3804420489602459515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_45
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 162
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ddfb11b424e05890800000000000000
+      internalID: -7471220935566295591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_46
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 185
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ef6c262cdb82f980800000000000000
+      internalID: -8506582968499933215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_47
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 162
+        width: 11
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac0dab34f5fd54330800000000000000
+      internalID: 3694604669578563786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_48
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 162
+        width: 9
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dad764b952b4c2b0800000000000000
+      internalID: -5565127141174551854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_49
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 185
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abca704556b2137b0800000000000000
+      internalID: -5246364376708436806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_50
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 164
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d44f0aae3115d7e0800000000000000
+      internalID: -1741466720070056750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_51
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 185
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a52ae48b2f011cb70800000000000000
+      internalID: 8917427371830583898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_52
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 164
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 751b9bfa8d1d909f0800000000000000
+      internalID: -501639154883776169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_53
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 185
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f8ed3bc823c8f080800000000000000
+      internalID: -9153351662654592782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_54
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 166
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b039f21365ca35490800000000000000
+      internalID: -7758668246836866293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_55
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 185
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36558a120d53665b0800000000000000
+      internalID: -5375549937185958557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_56
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 168
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c9535e66e78ab020800000000000000
+      internalID: 2358346778645060032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_57
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 170
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 455902902031288c0800000000000000
+      internalID: -3998612619687586476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_58
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 156
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 824ca9b961541ec40800000000000000
+      internalID: 5539784980044629032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_59
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 156
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35cfb6dddb32ef8f0800000000000000
+      internalID: -504926809848284077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_60
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 156
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e919acc1756b6ed0800000000000000
+      internalID: -2419728835342165532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_61
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 162
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 955380cefd3530f20800000000000000
+      internalID: 3387643565915518297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_62
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 158
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fbac876846d6aee0800000000000000
+      internalID: -1250076240085472263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_63
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 158
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b46c9cf54e0304c0800000000000000
+      internalID: -4322595523591904076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_64
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 158
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cf8300fe17d37420800000000000000
+      internalID: 2626679535562887111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_65
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 158
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4a01d95debbe10d0800000000000000
+      internalID: -3450113636430706097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_66
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 162
+        width: 6
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f539d059c7278d560800000000000000
+      internalID: 7338741472202429279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_67
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 145
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 257f32046037181e0800000000000000
+      internalID: -2197348672496994478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_68
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 149
+        width: 31
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0712ee442ec9acc20800000000000000
+      internalID: 3227564578597380464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_69
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 155
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cac2c99e1496fdd0800000000000000
+      internalID: -2452610087907046716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_70
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 155
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33c3e60d48e040870800000000000000
+      internalID: 8648053148053552179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_71
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 157
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bee151232a27e2930800000000000000
+      internalID: 4120356750041095915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_72
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 159
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09cc9b272a3938d20800000000000000
+      internalID: 3279627279574617232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_73
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 165
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b39c45aca3793990800000000000000
+      internalID: -7405760926889241672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_74
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 139
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 110203a18e3dd3fb0800000000000000
+      internalID: -4666340645060730863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_75
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 132
+        width: 29
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2649cab672bfa900800000000000000
+      internalID: 697972690275354159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_76
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 139
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffd03b31b36efb570800000000000000
+      internalID: 8484753364397264383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_77
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 139
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42a2aee0e4e42cf30800000000000000
+      internalID: 4594320667035970084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_78
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 141
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 019e4af9e5648c1d0800000000000000
+      internalID: -3330334552221226736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_79
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 141
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a54add880740d8d0800000000000000
+      internalID: -2823678864296098396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_80
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 141
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 339cd518a83144c40800000000000000
+      internalID: 5495538930895669555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_81
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 141
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 632dc204b7d551c70800000000000000
+      internalID: 8941155419153027638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_82
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 145
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf52ffcaa5cc489c0800000000000000
+      internalID: -3925788285338704389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_83
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 145
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d98ba694930d3f370800000000000000
+      internalID: 8355250678165846173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FantasypixelFont_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 132
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 094220296972559f0800000000000000
+      internalID: -480434257596898160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      FantasypixelFont_0: 5496216327919238656
+      FantasypixelFont_1: -2233231422128699118
+      FantasypixelFont_10: -5385266775713928056
+      FantasypixelFont_11: 8476236763815670861
+      FantasypixelFont_12: 2524664510322640319
+      FantasypixelFont_13: 1054267281630891941
+      FantasypixelFont_14: 3197770082920868898
+      FantasypixelFont_15: 8400904699326501587
+      FantasypixelFont_16: -3061810842970865166
+      FantasypixelFont_17: -6049627222533644982
+      FantasypixelFont_18: -3821620470417802070
+      FantasypixelFont_19: 833991506913212853
+      FantasypixelFont_2: 9141744183909050439
+      FantasypixelFont_20: -4861427654000675416
+      FantasypixelFont_21: 237238815068464046
+      FantasypixelFont_22: -6299856810274412708
+      FantasypixelFont_23: 7659651305755433294
+      FantasypixelFont_24: 3201435098419862047
+      FantasypixelFont_25: -706778388435141987
+      FantasypixelFont_26: 7138070107064923125
+      FantasypixelFont_27: 5017610993474773646
+      FantasypixelFont_28: 1445230076581074648
+      FantasypixelFont_29: 6921021711764610696
+      FantasypixelFont_3: 2605159460766322348
+      FantasypixelFont_30: 5573524026203572197
+      FantasypixelFont_31: 5192420430353881393
+      FantasypixelFont_32: 5063102440222973464
+      FantasypixelFont_33: -3610756549959443256
+      FantasypixelFont_34: 881497055573669688
+      FantasypixelFont_35: 6621320402963974858
+      FantasypixelFont_36: 207535296576069130
+      FantasypixelFont_37: -2362915997035374532
+      FantasypixelFont_38: 6734928398695891490
+      FantasypixelFont_39: 6523953996929690274
+      FantasypixelFont_4: -1077929041097087964
+      FantasypixelFont_40: -7391717867677427381
+      FantasypixelFont_41: -6313993577466217531
+      FantasypixelFont_42: 2555315806634717066
+      FantasypixelFont_43: 2655781066059524530
+      FantasypixelFont_44: 3804420489602459515
+      FantasypixelFont_45: -7471220935566295591
+      FantasypixelFont_46: -8506582968499933215
+      FantasypixelFont_47: 3694604669578563786
+      FantasypixelFont_48: -5565127141174551854
+      FantasypixelFont_49: -5246364376708436806
+      FantasypixelFont_5: 7053105739778495688
+      FantasypixelFont_50: -1741466720070056750
+      FantasypixelFont_51: 8917427371830583898
+      FantasypixelFont_52: -501639154883776169
+      FantasypixelFont_53: -9153351662654592782
+      FantasypixelFont_54: -7758668246836866293
+      FantasypixelFont_55: -5375549937185958557
+      FantasypixelFont_56: 2358346778645060032
+      FantasypixelFont_57: -3998612619687586476
+      FantasypixelFont_58: 5539784980044629032
+      FantasypixelFont_59: -504926809848284077
+      FantasypixelFont_6: -4740083904142362734
+      FantasypixelFont_60: -2419728835342165532
+      FantasypixelFont_61: 3387643565915518297
+      FantasypixelFont_62: -1250076240085472263
+      FantasypixelFont_63: -4322595523591904076
+      FantasypixelFont_64: 2626679535562887111
+      FantasypixelFont_65: -3450113636430706097
+      FantasypixelFont_66: 7338741472202429279
+      FantasypixelFont_67: -2197348672496994478
+      FantasypixelFont_68: 3227564578597380464
+      FantasypixelFont_69: -2452610087907046716
+      FantasypixelFont_7: 4843506636089001140
+      FantasypixelFont_70: 8648053148053552179
+      FantasypixelFont_71: 4120356750041095915
+      FantasypixelFont_72: 3279627279574617232
+      FantasypixelFont_73: -7405760926889241672
+      FantasypixelFont_74: -4666340645060730863
+      FantasypixelFont_75: 697972690275354159
+      FantasypixelFont_76: 8484753364397264383
+      FantasypixelFont_77: 4594320667035970084
+      FantasypixelFont_78: -3330334552221226736
+      FantasypixelFont_79: -2823678864296098396
+      FantasypixelFont_8: -2966139227222901482
+      FantasypixelFont_80: 5495538930895669555
+      FantasypixelFont_81: 8941155419153027638
+      FantasypixelFont_82: -3925788285338704389
+      FantasypixelFont_83: 8355250678165846173
+      FantasypixelFont_84: -480434257596898160
+      FantasypixelFont_9: -7893157819729073426
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

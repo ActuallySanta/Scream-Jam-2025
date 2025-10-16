@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3900079125319591677}
   - component: {fileID: 1725532533511189242}
+  - component: {fileID: 2010354220181735389}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -48,6 +49,18 @@ MonoBehaviour:
   playerGameObject: {fileID: 0}
   playerPrefab: {fileID: 7819505692149693740, guid: 153b360dae1e21f4dbf330abad56f786, type: 3}
   accquiredCandy: []
+--- !u!114 &2010354220181735389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4189538797257982941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e6b3524882ee1f4ab577b6740dfccae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2749000428989867824
 PrefabInstance:
   m_ObjectHideFlags: 0

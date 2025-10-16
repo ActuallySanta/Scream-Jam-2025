@@ -27,16 +27,25 @@ public class PlayerController : MonoBehaviour, IPlayer
     [SerializeField] private float throwVelocity;
     [SerializeField] private Transform headSpawnPoint;
     public GameObject headInstance = null;
-    private bool hasHead = false;
+    private bool thrownHead = false;
 
     //Timer
     [Header("Timer")]
     [SerializeField] private float pickupTimerReset;
     private float pickupTimer = 0.0f;
 
+    //Collider Scaling
+    [Header("ColliderScaling")]
+    [Header("With Head")]
+    [SerializeField] private Vector2 headColliderSize;
+    [SerializeField] private Vector2 headColliderOffset;
+    [Header("Headless")]
+    [SerializeField] private Vector2 headlessColliderSize;
+    [SerializeField] private Vector2 headlessColliderOffset;
+
     // Components
     private Rigidbody2D rb;
-    private CapsuleCollider2D collider;
+    private BoxCollider2D collider;
     private Animator anim;
 
     //Ground Check
@@ -85,7 +94,7 @@ public class PlayerController : MonoBehaviour, IPlayer
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        collider = GetComponent<CapsuleCollider2D>();
+        collider = GetComponent<BoxCollider2D>();
         anim = GetComponent<Animator>();
 
         interactorComponent = GetComponent<Interactor>();
@@ -98,6 +107,8 @@ public class PlayerController : MonoBehaviour, IPlayer
     void Update()
     {
         GetMoveInput();
+        anim.SetBool("HasHead", !thrownHead);
+        ChangeColliderSizeForHead();
 
         if (currPlayerState == PlayerState.Respawning) return;
 
@@ -114,7 +125,12 @@ public class PlayerController : MonoBehaviour, IPlayer
                 // Move the player horizontally
                 rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, rb.linearVelocityY);
                 break;
-        };
+
+            case PlayerState.Idle:
+                rb.linearVelocity = Vector2.zero;
+                break;
+        }
+        ;
     }
     private void FixedUpdate()
     {
@@ -135,7 +151,7 @@ public class PlayerController : MonoBehaviour, IPlayer
         {
             ChangeState(PlayerState.PickupSkull);
             Destroy(collision.collider.gameObject);
-            hasHead = false;
+            thrownHead = false;
             headInstance = null;
         }
         else if (collision.gameObject.CompareTag("Hazard"))
@@ -170,10 +186,14 @@ public class PlayerController : MonoBehaviour, IPlayer
 
     public void ThrowSkull(InputAction.CallbackContext context)
     {
-        if (!hasHead)
+        if (!thrownHead)
         {
             headInstance = Instantiate(headProjectilePrefab, headSpawnPoint.position, Quaternion.identity);
             headInstance.transform.parent = null;
+            headInstance.transform.localScale =
+                new Vector3(Mathf.Sign(transform.localScale.x) * headInstance.transform.localScale.x,
+                headInstance.transform.localScale.y,
+                headInstance.transform.localScale.z);
 
             // Determine facing direction (left or right)
             float facingDir = Mathf.Sign(transform.localScale.x);
@@ -184,7 +204,7 @@ public class PlayerController : MonoBehaviour, IPlayer
                 ForceMode2D.Impulse
             );
 
-            hasHead = true;
+            thrownHead = true;
             pickupTimer = pickupTimerReset;
         }
     }
@@ -204,7 +224,7 @@ public class PlayerController : MonoBehaviour, IPlayer
         //Set all bools to false
         foreach (AnimatorControllerParameter item in anim.parameters)
         {
-            anim.SetBool(item.name, false);
+            if (item.name != "HasHead") anim.SetBool(item.name, false);
         }
 
         switch (newStateToChangeTo)
@@ -234,7 +254,7 @@ public class PlayerController : MonoBehaviour, IPlayer
                 break;
         }
 
-        //Debug.Log("Current State is now: " + newStateToChangeTo);
+        Debug.Log("Current State is now: " + newStateToChangeTo);
         currPlayerState = newStateToChangeTo;
     }
 
@@ -255,7 +275,7 @@ public class PlayerController : MonoBehaviour, IPlayer
     public void ResetHead()
     {
         Destroy(headInstance);
-        hasHead = true;
+        thrownHead = false;
         headInstance = null;
     }
 
@@ -303,6 +323,20 @@ public class PlayerController : MonoBehaviour, IPlayer
     private void HandleForceRespawn(InputAction.CallbackContext obj)
     {
         GameManager.instance.RespawnPlayer();
+    }
+
+    private void ChangeColliderSizeForHead()
+    {
+        if (thrownHead)
+        {
+            collider.size = headlessColliderSize;
+            collider.offset = headlessColliderOffset;
+        }
+        else
+        {
+            collider.size = headColliderSize;
+            collider.offset = headColliderOffset;
+        }
     }
 }
 

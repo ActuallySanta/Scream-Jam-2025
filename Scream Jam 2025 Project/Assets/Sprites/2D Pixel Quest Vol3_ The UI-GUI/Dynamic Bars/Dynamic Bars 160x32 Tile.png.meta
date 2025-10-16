@@ -1,0 +1,650 @@
+fileFormatVersion: 2
+guid: 1d15040038fd07547862a45ead2e2ac9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5016329237096846652
+    second: Dynamic Bars 160x32 Tile_0
+  - first:
+      213: 4708900020571426918
+    second: Dynamic Bars 160x32 Tile_1
+  - first:
+      213: 8964887284162890292
+    second: Dynamic Bars 160x32 Tile_2
+  - first:
+      213: 7988128084595780118
+    second: Dynamic Bars 160x32 Tile_3
+  - first:
+      213: -3869847973848253983
+    second: Dynamic Bars 160x32 Tile_4
+  - first:
+      213: 8536620563358379246
+    second: Dynamic Bars 160x32 Tile_5
+  - first:
+      213: -2878076815998754440
+    second: Dynamic Bars 160x32 Tile_6
+  - first:
+      213: -482602649835247101
+    second: Dynamic Bars 160x32 Tile_7
+  - first:
+      213: -933390788906896067
+    second: Dynamic Bars 160x32 Tile_8
+  - first:
+      213: 3981349624591759488
+    second: Dynamic Bars 160x32 Tile_9
+  - first:
+      213: -6800322634987168606
+    second: Dynamic Bars 160x32 Tile_10
+  - first:
+      213: -6690404137840560724
+    second: Dynamic Bars 160x32 Tile_11
+  - first:
+      213: -1103672189332410058
+    second: Dynamic Bars 160x32 Tile_12
+  - first:
+      213: 5393961483625042777
+    second: Dynamic Bars 160x32 Tile_13
+  - first:
+      213: 4295627920288210648
+    second: Dynamic Bars 160x32 Tile_14
+  - first:
+      213: 1898086314083758341
+    second: Dynamic Bars 160x32 Tile_15
+  - first:
+      213: -1503822473810071220
+    second: Dynamic Bars 160x32 Tile_16
+  - first:
+      213: 457125444369428865
+    second: Dynamic Bars 160x32 Tile_17
+  - first:
+      213: 1391198161289009341
+    second: Dynamic Bars 160x32 Tile_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Dynamic Bars 160x32 Tile_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 290
+        width: 143
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4caaf62f22b626ab0800000000000000
+      internalID: -5016329237096846652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dynamic Bars 160x32 Tile_1
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 288
+        width: 143
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6605df0be9f595140800000000000000
+      internalID: 4708900020571426918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dynamic Bars 160x32 Tile_2
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 258
+        width: 143
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43a02f7ac7da96c70800000000000000
+      internalID: 8964887284162890292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dynamic Bars 160x32 Tile_3
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 258
+        width: 143
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61a27a68b288bde60800000000000000
+      internalID: 7988128084595780118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dynamic Bars 160x32 Tile_4
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 225
+        width: 143
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e9720865c98b4ac0800000000000000
+      internalID: -3869847973848253983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dynamic Bars 160x32 Tile_5
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 226
+        width: 143
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eec65456c2b287670800000000000000
+      internalID: 8536620563358379246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dynamic Bars 160x32 Tile_6
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 194
+        width: 143
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8716b1272640f08d0800000000000000
+      internalID: -2878076815998754440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dynamic Bars 160x32 Tile_7
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 194
+        width: 143
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30a68e862737d49f0800000000000000
+      internalID: -482602649835247101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dynamic Bars 160x32 Tile_8
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 162
+        width: 143
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d353596d50eeb03f0800000000000000
+      internalID: -933390788906896067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dynamic Bars 160x32 Tile_9
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 162
+        width: 143
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0883d64b368904730800000000000000
+      internalID: 3981349624591759488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dynamic Bars 160x32 Tile_10
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 130
+        width: 143
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ac9a87d79660a1a0800000000000000
+      internalID: -6800322634987168606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dynamic Bars 160x32 Tile_11
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 130
+        width: 143
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca5b53842e8e623a0800000000000000
+      internalID: -6690404137840560724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dynamic Bars 160x32 Tile_12
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 98
+        width: 143
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6313d56cdf7fea0f0800000000000000
+      internalID: -1103672189332410058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dynamic Bars 160x32 Tile_13
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 98
+        width: 143
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9531c9314633bda40800000000000000
+      internalID: 5393961483625042777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dynamic Bars 160x32 Tile_14
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 66
+        width: 143
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8de570495d22d9b30800000000000000
+      internalID: 4295627920288210648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dynamic Bars 160x32 Tile_15
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 64
+        width: 143
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5013ef7327b575a10800000000000000
+      internalID: 1898086314083758341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dynamic Bars 160x32 Tile_16
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 34
+        width: 143
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c413d4b7d69512be0800000000000000
+      internalID: -1503822473810071220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dynamic Bars 160x32 Tile_17
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 34
+        width: 143
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 181be617b29085600800000000000000
+      internalID: 457125444369428865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dynamic Bars 160x32 Tile_18
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 0
+        width: 143
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db8dec75b578e4310800000000000000
+      internalID: 1391198161289009341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Dynamic Bars 160x32 Tile_0: -5016329237096846652
+      Dynamic Bars 160x32 Tile_1: 4708900020571426918
+      Dynamic Bars 160x32 Tile_10: -6800322634987168606
+      Dynamic Bars 160x32 Tile_11: -6690404137840560724
+      Dynamic Bars 160x32 Tile_12: -1103672189332410058
+      Dynamic Bars 160x32 Tile_13: 5393961483625042777
+      Dynamic Bars 160x32 Tile_14: 4295627920288210648
+      Dynamic Bars 160x32 Tile_15: 1898086314083758341
+      Dynamic Bars 160x32 Tile_16: -1503822473810071220
+      Dynamic Bars 160x32 Tile_17: 457125444369428865
+      Dynamic Bars 160x32 Tile_18: 1391198161289009341
+      Dynamic Bars 160x32 Tile_2: 8964887284162890292
+      Dynamic Bars 160x32 Tile_3: 7988128084595780118
+      Dynamic Bars 160x32 Tile_4: -3869847973848253983
+      Dynamic Bars 160x32 Tile_5: 8536620563358379246
+      Dynamic Bars 160x32 Tile_6: -2878076815998754440
+      Dynamic Bars 160x32 Tile_7: -482602649835247101
+      Dynamic Bars 160x32 Tile_8: -933390788906896067
+      Dynamic Bars 160x32 Tile_9: 3981349624591759488
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
