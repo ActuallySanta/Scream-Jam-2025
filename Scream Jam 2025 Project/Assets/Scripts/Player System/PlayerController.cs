@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour, IPlayer
     [SerializeField] private float throwVelocity;
     [SerializeField] private Transform headSpawnPoint;
     public GameObject headInstance = null;
-    private bool hasHead = false;
+    private bool thrownHead = false;
 
     //Timer
     [Header("Timer")]
@@ -139,7 +139,8 @@ public class PlayerController : MonoBehaviour, IPlayer
         {
             ChangeState(PlayerState.PickupSkull);
             Destroy(collision.collider.gameObject);
-            hasHead = false;
+            thrownHead = false;
+            anim.SetBool("HasHead", true);
             headInstance = null;
         }
         else if (collision.gameObject.CompareTag("Hazard"))
@@ -174,7 +175,7 @@ public class PlayerController : MonoBehaviour, IPlayer
 
     public void ThrowSkull(InputAction.CallbackContext context)
     {
-        if (!hasHead)
+        if (!thrownHead)
         {
             headInstance = Instantiate(headProjectilePrefab, headSpawnPoint.position, Quaternion.identity);
             headInstance.transform.parent = null;
@@ -188,7 +189,8 @@ public class PlayerController : MonoBehaviour, IPlayer
                 ForceMode2D.Impulse
             );
 
-            hasHead = true;
+            thrownHead = true;
+            anim.SetBool("HasHead",false);
             pickupTimer = pickupTimerReset;
         }
     }
@@ -259,7 +261,7 @@ public class PlayerController : MonoBehaviour, IPlayer
     public void ResetHead()
     {
         Destroy(headInstance);
-        hasHead = true;
+        thrownHead = true;
         headInstance = null;
     }
 

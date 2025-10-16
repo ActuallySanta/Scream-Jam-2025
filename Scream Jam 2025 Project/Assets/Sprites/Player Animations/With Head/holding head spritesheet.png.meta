@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: ed73cd926c1e87f4ca556aea6cbbecf5
+guid: 4180753607eb96549af2ef7a17e4dd9c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5385945637648505626
-    second: jump headless spritesheet_0
+      213: 6994591266576435787
+    second: holding head spritesheet_0
   - first:
-      213: -9066389892327771045
-    second: jump headless spritesheet_1
+      213: -1623939469854595338
+    second: holding head spritesheet_1
   - first:
-      213: 671704645021234956
-    second: jump headless spritesheet_2
+      213: -4781739900485802536
+    second: holding head spritesheet_2
   - first:
-      213: 1354420428859910253
-    second: jump headless spritesheet_3
+      213: 5348630659975254433
+    second: holding head spritesheet_3
   - first:
-      213: 5024770646066062520
-    second: jump headless spritesheet_4
+      213: -2233430187099852749
+    second: holding head spritesheet_4
   - first:
-      213: -6377769742400909057
-    second: jump headless spritesheet_5
+      213: -2676434339032393349
+    second: holding head spritesheet_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -128,111 +128,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: jump headless spritesheet_0
+      name: holding head spritesheet_0
       rect:
         serializedVersion: 2
-        x: 89
-        y: 1007
+        x: 95
+        y: 971
         width: 338
-        height: 416
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        height: 668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6e465608af64145b0800000000000000
-      internalID: -5385945637648505626
+      spriteID: b4a8651b2b7c11160800000000000000
+      internalID: 6994591266576435787
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump headless spritesheet_1
+      name: holding head spritesheet_2
       rect:
         serializedVersion: 2
-        x: 545
-        y: 1127
-        width: 356
-        height: 386
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 845
+        y: 971
+        width: 494
+        height: 632
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b547c90cd66bd2280800000000000000
-      internalID: -9066389892327771045
+      spriteID: 8d56b3f25e8d3adb0800000000000000
+      internalID: -4781739900485802536
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump headless spritesheet_2
+      name: holding head spritesheet_3
       rect:
         serializedVersion: 2
-        x: 1019
-        y: 995
-        width: 356
-        height: 452
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c077878d0df525900800000000000000
-      internalID: 671704645021234956
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump headless spritesheet_4
-      rect:
-        serializedVersion: 2
-        x: 89
-        y: 245
+        x: 485
+        y: 971
         width: 338
-        height: 416
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        height: 715
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8b4e39cb7429bb540800000000000000
-      internalID: 5024770646066062520
+      spriteID: 1a1969a3f372a3a40800000000000000
+      internalID: 5348630659975254433
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump headless spritesheet_5
+      name: holding head spritesheet_4
       rect:
         serializedVersion: 2
-        x: 503
-        y: 245
-        width: 338
-        height: 428
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 59
+        y: 257
+        width: 524
+        height: 518
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ff095fcc53c9d77a0800000000000000
-      internalID: -6377769742400909057
+      spriteID: 330774bf3134101e0800000000000000
+      internalID: -2233430187099852749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: holding head spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 257
+        width: 422
+        height: 434
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b79115526256bdad0800000000000000
+      internalID: -2676434339032393349
       vertices: []
       indices: 
       edges: []
@@ -241,7 +241,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 69e9e6fd90a028945b59915c14acdfdf
+    spriteID: c97e9a580a7c2fa4db81ca3543f82bd6
     internalID: 0
     vertices: []
     indices: 
@@ -251,13 +251,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      jump headless spritesheet_0: -5385945637648505626
-      jump headless spritesheet_1: -9066389892327771045
-      jump headless spritesheet_2: 671704645021234956
-      jump headless spritesheet_3: 1354420428859910253
-      jump headless spritesheet_4: 5024770646066062520
-      jump headless spritesheet_5: -6377769742400909057
-      jump headless spritesheet_6: -2139376329
+      holding head spritesheet_0: 6994591266576435787
+      holding head spritesheet_1: -1623939469854595338
+      holding head spritesheet_2: -4781739900485802536
+      holding head spritesheet_3: 5348630659975254433
+      holding head spritesheet_4: -2233430187099852749
+      holding head spritesheet_5: -2676434339032393349
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

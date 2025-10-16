@@ -1,22 +1,10 @@
 fileFormatVersion: 2
-guid: f4737d555c61b9846b8fb05d8a88e11a
+guid: cf2c3b2bfc930fc48be211fadfbe0ac0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3813320423821029385
-    second: idle headless spritesheet_0
-  - first:
-      213: -8547245475826931353
-    second: idle headless spritesheet_1
-  - first:
-      213: 8324033310625643160
-    second: idle headless spritesheet_2
-  - first:
-      213: 3634408426128580937
-    second: idle headless spritesheet_3
-  - first:
-      213: -2135900315495196023
-    second: idle headless spritesheet_4
+      213: -7444382139373290806
+    second: ghost sprite_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -125,89 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: idle headless spritesheet_1
+      name: ghost sprite_0
       rect:
         serializedVersion: 2
-        x: 107
-        y: 1025
-        width: 338
-        height: 434
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 89
+        y: 1355
+        width: 326
+        height: 362
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 76965456685126980800000000000000
-      internalID: -8547245475826931353
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: idle headless spritesheet_2
-      rect:
-        serializedVersion: 2
-        x: 557
-        y: 1025
-        width: 338
-        height: 428
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 89a3c528138e48370800000000000000
-      internalID: 8324033310625643160
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: idle headless spritesheet_3
-      rect:
-        serializedVersion: 2
-        x: 1007
-        y: 1025
-        width: 338
-        height: 416
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 941a4182533007230800000000000000
-      internalID: 3634408426128580937
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: idle headless spritesheet_4
-      rect:
-        serializedVersion: 2
-        x: 107
-        y: 245
-        width: 338
-        height: 416
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 98a9343caf1cb52e0800000000000000
-      internalID: -2135900315495196023
+      spriteID: aca7462e2ed30b890800000000000000
+      internalID: -7444382139373290806
       vertices: []
       indices: 
       edges: []
@@ -216,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 64d53fec9aea8d34ba2209f16d99c017
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -226,11 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      idle headless spritesheet_0: -3813320423821029385
-      idle headless spritesheet_1: -8547245475826931353
-      idle headless spritesheet_2: 8324033310625643160
-      idle headless spritesheet_3: 3634408426128580937
-      idle headless spritesheet_4: -2135900315495196023
+      ghost sprite_0: -7444382139373290806
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
