@@ -141,7 +141,7 @@ public class GameManager : MonoBehaviour
     private void GameWin()
     {
         Debug.Log("You Win!");
-        //TODO Switch to game win scene
+        SceneManager.LoadScene("GameCompleteScene");
     }
 
     public void RespawnPlayer()
