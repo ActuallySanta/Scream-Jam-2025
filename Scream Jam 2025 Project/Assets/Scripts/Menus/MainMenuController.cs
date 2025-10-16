@@ -17,10 +17,10 @@ public class MainMenuController : MonoBehaviour
         // Main Menu Buttons
         root.Q<Button>("playButton").clicked += () => SceneManager.LoadScene("Game");
         root.Q<Button>("loadButton").clicked += ShowPasswordPrompt;
-        root.Q<Button>("howToButton").clicked += () => ShowInfo("How to Play", "Use arrow keys to move.\n Click LMB to shoot.");
+        root.Q<Button>("howToButton").clicked += () => ShowInfo("How to Play", "A and D, Left and Right Arrow Keys: Move left and right\nSpacebar: Jump\nLeft Click or J: Throw Skull\nR or K: Respawn\nP or Escape: Pause Game");
 
         //TODO: Update credits
-        root.Q<Button>("creditsButton").clicked += () => ShowInfo("Credits", "Game by Santi Benitez...Emma Duprey\nArt by Taylor\nUI Assets from BarelyApes\nBackground Music from Dark Fantasy Studio");
+        root.Q<Button>("creditsButton").clicked += () => ShowInfo("Credits", "Project Lead: Santiago Benitez-Fernandez\nMain Artist: Taylor Fraizer\nProgrammers: Cooper Fleishman, Kyle Benjamin, Emma Duprey, Santiago Benitez-Fernandez\nMain Level Designer: Kyle Benjamin\nUI Assets from BarelyApes\nBackground Music from Dark Fantasy Studio");
         //root.Q<Button>("quitButton").clicked += Application.Quit;
 
         // Settings Sliders
