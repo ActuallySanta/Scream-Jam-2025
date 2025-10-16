@@ -64,7 +64,7 @@ public class PauseMenuUI : MonoBehaviour
     private void ReturnToMainMenu()
     {
         Debug.Log("Main menuing!");
-        //SceneManager.LoadScene("");
+        SceneManager.LoadScene("Main Menu");
     }
 
     private void QuitGame()
