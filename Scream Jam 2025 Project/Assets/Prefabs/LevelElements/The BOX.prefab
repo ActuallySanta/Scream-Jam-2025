@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1302670792474937853}
   - component: {fileID: 7112825892836396700}
   - component: {fileID: 7003552315632402755}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: The BOX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,11 +101,11 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
+  m_Mass: 30
+  m_LinearDamping: 0.2
   m_AngularDamping: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 762b97fd1cebb9c4bae3455e3fcf814c, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
