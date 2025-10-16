@@ -102,7 +102,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conditionComponents: []
-  conditionUnlocks: 1
+  openDoorSprite: {fileID: 32690352, guid: 77d2433c78305b940832bc5a6d633375, type: 3}
+  closeDoorSprite: {fileID: 6441989088453085759, guid: 77d2433c78305b940832bc5a6d633375, type: 3}
+  inverseConditional: 1
 --- !u!61 &2519986690534055595
 BoxCollider2D:
   m_ObjectHideFlags: 0
