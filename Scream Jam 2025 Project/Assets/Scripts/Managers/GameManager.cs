@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     public List<CandyObject> accquiredCandy = new List<CandyObject>();
     public int TotalCandyAccquired { get => accquiredCandy.Count; }
     public event Action OnAddCandy;
+    [SerializeField] private float totalCandy;
 
     //Pause Menu
     public bool isPaused { get; private set; }
@@ -133,7 +134,14 @@ public class GameManager : MonoBehaviour
         {
             OnAddCandy?.Invoke();
             accquiredCandy.Add(_candy);
+            if (accquiredCandy.Count == totalCandy) GameWin();
         }
+    }
+
+    private void GameWin()
+    {
+        Debug.Log("You Win!");
+        //TODO Switch to game win scene
     }
 
     public void RespawnPlayer()

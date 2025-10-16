@@ -1,28 +1,10 @@
 fileFormatVersion: 2
-guid: a0e29b497ae96ae46954d281b291e949
+guid: 8f18cf7962b7a7441ad938b02633859a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3007767458111247662
-    second: run headless spritesheet_0
-  - first:
-      213: -7840432285156087660
-    second: run headless spritesheet_1
-  - first:
-      213: -1433581059816759760
-    second: run headless spritesheet_2
-  - first:
-      213: 4058978149212383602
-    second: run headless spritesheet_3
-  - first:
-      213: 2328974922766061704
-    second: run headless spritesheet_4
-  - first:
-      213: -5602539943065552817
-    second: run headless spritesheet_5
-  - first:
-      213: -6774605858223646881
-    second: run headless spritesheet_6
+      213: 6271143956674678405
+    second: Light Sprite_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -64,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 350
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -132,7 +114,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -144,89 +126,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: run headless spritesheet_1
+      name: Light Sprite_0
       rect:
         serializedVersion: 2
-        x: 35
-        y: 973
-        width: 470
-        height: 434
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 49864c58060313390800000000000000
-      internalID: -7840432285156087660
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: run headless spritesheet_2
-      rect:
-        serializedVersion: 2
-        x: 641
-        y: 973
-        width: 362
-        height: 416
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 03ed4ec1f95ea1ce0800000000000000
-      internalID: -1433581059816759760
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: run headless spritesheet_3
-      rect:
-        serializedVersion: 2
-        x: 1151
-        y: 977
-        width: 308
-        height: 440
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 27960ee0f13645830800000000000000
-      internalID: 4058978149212383602
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: run headless spritesheet_6
-      rect:
-        serializedVersion: 2
-        x: 143
-        y: 149
-        width: 272
-        height: 422
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f579c478dd3cbf1a0800000000000000
-      internalID: -6774605858223646881
+      spriteID: 58e8ee0e334970750800000000000000
+      internalID: 6271143956674678405
       vertices: []
       indices: 
       edges: []
@@ -235,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a191c60f88c3c7046afc5f8d50e9bc80
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -245,13 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      run headless spritesheet_0: -3007767458111247662
-      run headless spritesheet_1: -7840432285156087660
-      run headless spritesheet_2: -1433581059816759760
-      run headless spritesheet_3: 4058978149212383602
-      run headless spritesheet_4: 2328974922766061704
-      run headless spritesheet_5: -5602539943065552817
-      run headless spritesheet_6: -6774605858223646881
+      Light Sprite_0: 6271143956674678405
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
