@@ -71,6 +71,7 @@ public class PauseMenuUI : MonoBehaviour
     {
         Debug.Log("Quitting!");
         Application.Quit();
+    }
         
         // can replace w diff quitting mechanism if needbe
     private void TriggerPause()

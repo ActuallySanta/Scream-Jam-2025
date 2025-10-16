@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class LeverInteractable : Interactable, IUnlockCondition
 {
-    [SerializeField] private Color defaultColor;
-    [SerializeField] private Color interactedColor;
 
     private bool pulled;
     public bool unlockConditionMet => pulled;
@@ -14,7 +12,7 @@ public class LeverInteractable : Interactable, IUnlockCondition
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
-        sr.color = defaultColor;
+        sr.color = Color.red;
     }
 
     public override void Interact()
@@ -24,12 +22,14 @@ public class LeverInteractable : Interactable, IUnlockCondition
         if (!pulled)
         {
             pulled = true;
-            sr.color = interactedColor;
+            sr.color = Color.green;
         }
         else
         {
             pulled = false;
-            sr.color = defaultColor;
+            sr.color = Color.red;
         }
+
+        transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
     }
 }
