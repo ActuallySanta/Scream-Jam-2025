@@ -114,6 +114,10 @@ public class PlayerController : MonoBehaviour, IPlayer
                 // Move the player horizontally
                 rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, rb.linearVelocityY);
                 break;
+
+                case PlayerState.Idle:
+                rb.linearVelocity = Vector2.zero;
+                break;
         };
     }
     private void FixedUpdate()
