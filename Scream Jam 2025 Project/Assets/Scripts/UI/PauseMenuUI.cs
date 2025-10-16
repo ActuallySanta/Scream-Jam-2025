@@ -64,15 +64,16 @@ public class PauseMenuUI : MonoBehaviour
     private void ReturnToMainMenu()
     {
         Debug.Log("Main menuing!");
-        //SceneManager.LoadScene("");
+        SceneManager.LoadScene("Main Menu");
     }
 
     private void QuitGame()
     {
         Debug.Log("Quitting!");
         Application.Quit();
-        
-        // can replace w diff quitting mechanism if needbe
+    }
+    
+    // can replace w diff quitting mechanism if needbe
     private void TriggerPause()
     {
         Debug.Log("ts should pause");
