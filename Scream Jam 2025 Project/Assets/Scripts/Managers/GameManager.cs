@@ -79,19 +79,6 @@ public class GameManager : MonoBehaviour
         TogglePause();
     }
 
-    private void Update()
-    {
-        //Debugging Buttons
-        if (isDebugging)
-        {
-            Debug.Log("Debugging!");
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                ResetGameState();
-            }
-        }
-    }
-
     /// <summary>
     /// Allow toggling of the debugging keybinds
     /// </summary>
@@ -158,7 +145,7 @@ public class GameManager : MonoBehaviour
 
     public void ResetGameState()
     {
-        OnReset?.Invoke();
+        
         RespawnPlayer();
     }
 
@@ -166,6 +153,8 @@ public class GameManager : MonoBehaviour
     {
         if (currCheckpoint != null)
         {
+            OnReset?.Invoke();
+
             Checkpoint checkpoint = currCheckpoint.GetComponent<Checkpoint>();
 
             if (checkpoint.returnHeadOnLoad)
