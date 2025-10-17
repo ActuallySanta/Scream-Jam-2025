@@ -20,6 +20,7 @@ public class Crate : MonoBehaviour
 
     private void ResetToCheckpoint()
     {
+        Debug.Log("resetToCheckpoint");
         crateObject.transform.position = spawnPoint.position;
     }
 }
