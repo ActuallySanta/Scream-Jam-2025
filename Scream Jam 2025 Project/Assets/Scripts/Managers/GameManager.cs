@@ -28,8 +28,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float totalCandy;
 
     //Reset
-    public delegate void OnResetEventHandler();
-    public event OnResetEventHandler OnReset;
+    public event Action OnReset;
 
     //Pause Menu
     public bool isPaused { get; private set; }
@@ -61,9 +60,18 @@ public class GameManager : MonoBehaviour
             InputManager.Instance.EnablePlayerMovementActions();
         }
         InputManager.Instance.OnPause += HandlePauseInput;
-
+        SceneManager.sceneLoaded += GetPlayer;
         //Initialize Bools
         isDebugging = false;
+    }
+
+    private void GetPlayer(Scene arg0, LoadSceneMode arg1)
+    {
+        if (arg0.name == "Game")
+        {
+            playerGameObject = GameObject.FindGameObjectWithTag("Player");
+
+        }
     }
 
     private void HandlePauseInput(InputAction.CallbackContext ctx)
@@ -177,4 +185,11 @@ public class GameManager : MonoBehaviour
             Debug.LogWarning("No Checkpoint Set");
         }
     }
+
+    public void ResetGameManager()
+    {
+        accquiredCandy.Clear();
+    }
+
+
 }
