@@ -6,8 +6,6 @@
     -unity-text-align: upper-center;
     color: rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
-    margin-left: 25%;
-    margin-right: 25%;
     top: 50%;
     padding-left: 3%;
     padding-right: 3%;
@@ -25,9 +23,15 @@
 .menu-container * {
     margin-bottom: 5px;
     margin-top: 5px;
+    -unity-font-definition: url("project://database/Assets/Fonts/Fantasypixelfont.ttf?fileID=12800000&guid=4918eb437ad24bc4686a974227d56487&type=3#Fantasypixelfont");
 }
 
 #GamePausedText {
     font-size: 32px;
     bottom: 10%;
+}
+
+.menu-container Button {
+    background-image: url("project://database/Assets/Sprites/2D%20Pixel%20Quest%20Vol3_%20The%20UI-GUI/Menu%20Buttons%20And%20Switch/Menu%20Buttons/F_UI_MenuButton_A2.png?fileID=666867759993593460&guid=337c35313968ad64086a25e2dc21f92b&type=3#F_UI_MenuButton_A2_0");
+    background-color: rgba(0, 0, 0, 0);
 }
