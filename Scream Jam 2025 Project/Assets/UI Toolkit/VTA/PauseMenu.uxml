@@ -1,9 +1,11 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/Stylesheets/PauseMenu.uss?fileID=7433441132597879392&amp;guid=d11f1671e0884f24e9aa56d15db487da&amp;type=3#PauseMenu" />
-    <ui:VisualElement name="MenuBorder" class="menu-container" style="top: 25%; bottom: 74px; background-image: url(&quot;project://database/Assets/Sprites/2D%20Pixel%20Quest%20Vol3_%20The%20UI-GUI/Panels/Panels/F_UI_Panel_A.png?fileID=2800000&amp;guid=f1271840f76864446a0e89e292c55733&amp;type=3#F_UI_Panel_A&quot;); background-color: rgba(255, 255, 255, 0); width: 294px; -unity-background-scale-mode: scale-to-fit; background-size: 100% 100%; -unity-slice-type: tiled;">
-        <ui:Label text="Game Paused" name="GamePausedText" style="-unity-text-align: lower-center; -unity-font-definition: url(&quot;project://database/Assets/Fonts/Fantasypixelfont.ttf?fileID=12800000&amp;guid=4918eb437ad24bc4686a974227d56487&amp;type=3#Fantasypixelfont&quot;); transform-origin: center; color: rgb(255, 255, 255); font-size: 38px;" />
-        <ui:Button text="Resume" name="ResumeGameButton" />
-        <ui:Button text="Main Menu" name="MainMenuButton" />
-        <ui:Button text="Quit" name="QuitButton" />
+    <ui:VisualElement style="flex-grow: 1; justify-content: center;">
+        <ui:VisualElement name="MenuBorder" class="menu-container" style="top: auto; bottom: auto; background-image: url(&quot;project://database/Assets/Sprites/2D%20Pixel%20Quest%20Vol3_%20The%20UI-GUI/Panels/Panels/F_UI_Panel_A.png?fileID=2800000&amp;guid=f1271840f76864446a0e89e292c55733&amp;type=3#F_UI_Panel_A&quot;); background-color: rgba(255, 255, 255, 0); width: 294px; -unity-background-scale-mode: scale-to-fit; background-size: 100% 100%; -unity-slice-type: tiled; align-self: center;">
+            <ui:Label text="Game Paused" name="GamePausedText" style="-unity-text-align: lower-center; -unity-font-definition: url(&quot;project://database/Assets/Fonts/Fantasypixelfont.ttf?fileID=12800000&amp;guid=4918eb437ad24bc4686a974227d56487&amp;type=3#Fantasypixelfont&quot;); transform-origin: center; color: rgb(255, 255, 255); font-size: 38px;" />
+            <ui:Button text="Resume" name="ResumeGameButton" style="border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0;" />
+            <ui:Button text="Main Menu" name="MainMenuButton" style="border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0;" />
+            <ui:Button text="Quit" name="QuitButton" style="border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0;" />
+        </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
