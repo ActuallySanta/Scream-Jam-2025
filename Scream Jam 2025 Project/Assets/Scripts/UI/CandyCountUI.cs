@@ -18,6 +18,6 @@ public class CandyCountUI : MonoBehaviour
 
     private void UpdateLabel()
     {
-        scoreLabel.text = $"Candy Collected: {GameManager.instance.TotalCandyAccquired}";
+        scoreLabel.text = $"Candy Collected: {GameManager.instance.TotalCandyAccquired} / {GameManager.instance.totalCandy}";
     }
 }

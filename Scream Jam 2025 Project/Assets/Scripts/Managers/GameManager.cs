@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     public List<CandyObject> accquiredCandy = new List<CandyObject>();
     public int TotalCandyAccquired { get => accquiredCandy.Count; }
     public event Action OnAddCandy;
-    [SerializeField] private float totalCandy;
+    public float totalCandy;
 
     //Reset
     public event Action OnReset;
