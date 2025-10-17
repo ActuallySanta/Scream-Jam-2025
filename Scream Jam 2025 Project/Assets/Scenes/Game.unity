@@ -4523,6 +4523,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Checkpoint (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5091453090386345942, guid: e3719cde13d13bb469ed6aba64014672, type: 3}
+      propertyPath: m_Size.y
+      value: 14.478973
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091453090386345942, guid: e3719cde13d13bb469ed6aba64014672, type: 3}
+      propertyPath: m_Offset.y
+      value: 4.1777687
+      objectReference: {fileID: 0}
     - target: {fileID: 8634006994826789132, guid: e3719cde13d13bb469ed6aba64014672, type: 3}
       propertyPath: m_LocalScale.y
       value: 0.5
@@ -12219,6 +12227,14 @@ PrefabInstance:
     - target: {fileID: 285400571455054158, guid: e3719cde13d13bb469ed6aba64014672, type: 3}
       propertyPath: m_Name
       value: Checkpoint (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091453090386345942, guid: e3719cde13d13bb469ed6aba64014672, type: 3}
+      propertyPath: m_Size.y
+      value: 7.1200047
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091453090386345942, guid: e3719cde13d13bb469ed6aba64014672, type: 3}
+      propertyPath: m_Offset.y
+      value: 1.0600023
       objectReference: {fileID: 0}
     - target: {fileID: 8634006994826789132, guid: e3719cde13d13bb469ed6aba64014672, type: 3}
       propertyPath: m_LocalScale.x
