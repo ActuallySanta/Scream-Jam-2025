@@ -131,8 +131,8 @@ public class GameManager : MonoBehaviour
     {
         if (!accquiredCandy.Contains(_candy))
         {
-            OnAddCandy?.Invoke();
             accquiredCandy.Add(_candy);
+            OnAddCandy?.Invoke();
             if (accquiredCandy.Count == totalCandy) GameWin();
         }
     }
