@@ -16,7 +16,6 @@ public class MainMenuController : MonoBehaviour
 
         // Main Menu Buttons
         root.Q<Button>("playButton").clicked += StartGame;
-        root.Q<Button>("loadButton").clicked += ShowPasswordPrompt;
         root.Q<Button>("howToButton").clicked += () => ShowInfo("How to Play", "A and D, Left and Right Arrow Keys: Move left and right\nSpacebar: Jump\nLeft Click or J: Throw Skull\nR or K: Respawn\nE and L: Interact\nP or Escape: Pause Game");
         root.Q<Button>("quitButton").clicked += QuitGame;
 
