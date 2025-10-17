@@ -27,6 +27,10 @@ public class GameManager : MonoBehaviour
     public event Action OnAddCandy;
     [SerializeField] private float totalCandy;
 
+    //Reset
+    public delegate void OnResetEventHandler();
+    public event OnResetEventHandler OnReset;
+
     //Pause Menu
     public bool isPaused { get; private set; }
     public event Action OnPause;
@@ -75,7 +79,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("Debugging!");
             if (Input.GetKeyDown(KeyCode.R))
             {
-                RespawnPlayer();
+                ResetGameState();
             }
         }
     }
@@ -142,6 +146,12 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("You Win!");
         SceneManager.LoadScene("GameCompleteScene");
+    }
+
+    public void ResetGameState()
+    {
+        OnReset?.Invoke();
+        RespawnPlayer();
     }
 
     public void RespawnPlayer()
