@@ -28,8 +28,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float totalCandy;
 
     //Reset
-    public delegate void OnResetEventHandler();
-    public event OnResetEventHandler OnReset;
+    public event Action OnReset;
 
     //Pause Menu
     public bool isPaused { get; private set; }
@@ -61,27 +60,23 @@ public class GameManager : MonoBehaviour
             InputManager.Instance.EnablePlayerMovementActions();
         }
         InputManager.Instance.OnPause += HandlePauseInput;
-
+        SceneManager.sceneLoaded += GetPlayer;
         //Initialize Bools
         isDebugging = false;
+    }
+
+    private void GetPlayer(Scene arg0, LoadSceneMode arg1)
+    {
+        if (arg0.name == "Game")
+        {
+            playerGameObject = GameObject.FindGameObjectWithTag("Player");
+
+        }
     }
 
     private void HandlePauseInput(InputAction.CallbackContext ctx)
     {
         TogglePause();
-    }
-
-    private void Update()
-    {
-        //Debugging Buttons
-        if (isDebugging)
-        {
-            Debug.Log("Debugging!");
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                ResetGameState();
-            }
-        }
     }
 
     /// <summary>
@@ -150,7 +145,7 @@ public class GameManager : MonoBehaviour
 
     public void ResetGameState()
     {
-        OnReset?.Invoke();
+        
         RespawnPlayer();
     }
 
@@ -158,6 +153,8 @@ public class GameManager : MonoBehaviour
     {
         if (currCheckpoint != null)
         {
+            OnReset?.Invoke();
+
             Checkpoint checkpoint = currCheckpoint.GetComponent<Checkpoint>();
 
             if (checkpoint.returnHeadOnLoad)
@@ -177,4 +174,11 @@ public class GameManager : MonoBehaviour
             Debug.LogWarning("No Checkpoint Set");
         }
     }
+
+    public void ResetGameManager()
+    {
+        accquiredCandy.Clear();
+    }
+
+
 }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 
 public class Crate : MonoBehaviour
 {
@@ -6,7 +7,7 @@ public class Crate : MonoBehaviour
     [SerializeField] GameObject crateObject;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void OnEnable()
     {
         GameManager.instance.OnReset += ResetToCheckpoint;    
     }
